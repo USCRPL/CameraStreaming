@@ -1,0 +1,77 @@
+-------------------------
+DigitalWatch Scanning log
+Build - v2
+-------------------------
+
+Starting Scan Thread...
+Looking on pid 0x0000 for tableId 0x00
+  Got IMpeg2Stream
+  Supplied data buffer
+  Event or timeout triggered  1
+  pid 0x00 tid 0x00 tableIdExt 0x0000, 0/0 (version 0)
+    PAT
+      Transport Stream Id 0x0000
+        Found service id 0x0001 with PMT 0x00ff
+    Done all sections for this table
+Looking on pid 0x00ff for tableId 0x02
+  Got IMpeg2Stream
+  Supplied data buffer
+  Event or timeout triggered  1
+  pid 0xff tid 0x02 tableIdExt 0x0001, 0/0 (version 0)
+    PMT
+      serviceId 0x0001, transportStreamId=0x0000
+        PCR         : PID 0x0100
+        H264 VIDEO       : PID 0x0100
+        AAC AUDIO       : PID 0x0101
+    Done all sections for this table
+Looking on pid 0x0010 for tableId 0x40
+  Got IMpeg2Stream
+  Supplied data buffer
+  Event or timeout triggered  258
+  Timeout getting table (pid=16, tableId=64
+Looking on pid 0x0011 for tableId 0x42
+  Got IMpeg2Stream
+  Supplied data buffer
+  Event or timeout triggered  1
+  pid 0x11 tid 0x42 tableIdExt 0x0000, 0/0 (version 0)
+    SDT (actual TS)
+      TransportStreamId 0x0000, OriginalNetworkId 0x0001
+      0x0000 0x0001: pmt_pid 0x00ff USC_RPL_DOMEPIERCER_LIVESTREAM -- USC_RPL_DOMEPIERCER_LIVESTREAM (running)
+    Done all sections for this table
+
+Starting Scan Thread...
+Looking on pid 0x0000 for tableId 0x00
+  Got IMpeg2Stream
+  Supplied data buffer
+  Event or timeout triggered  1
+  pid 0x00 tid 0x00 tableIdExt 0x0000, 0/0 (version 0)
+    PAT
+      Transport Stream Id 0x0000
+        Found service id 0x0001 with PMT 0x00ff
+    Done all sections for this table
+Looking on pid 0x00ff for tableId 0x02
+  Got IMpeg2Stream
+  Supplied data buffer
+  Event or timeout triggered  1
+  pid 0xff tid 0x02 tableIdExt 0x0001, 0/0 (version 0)
+    PMT
+      serviceId 0x0001, transportStreamId=0x0000
+        PCR         : PID 0x0100
+        H264 VIDEO       : PID 0x0100
+        AAC AUDIO       : PID 0x0101
+    Done all sections for this table
+Looking on pid 0x0010 for tableId 0x40
+  Got IMpeg2Stream
+  Supplied data buffer
+  Event or timeout triggered  258
+  Timeout getting table (pid=16, tableId=64
+Looking on pid 0x0011 for tableId 0x42
+  Got IMpeg2Stream
+  Supplied data buffer
+  Event or timeout triggered  1
+  pid 0x11 tid 0x42 tableIdExt 0x0000, 0/0 (version 0)
+    SDT (actual TS)
+      TransportStreamId 0x0000, OriginalNetworkId 0x0001
+      0x0000 0x0001: pmt_pid 0x00ff USC_RPL_DOMEPIERCER_LIVESTREAM -- USC_RPL_DOMEPIERCER_LIVESTREAM (running)
+    Done all sections for this table
+Buffer Logging now completed

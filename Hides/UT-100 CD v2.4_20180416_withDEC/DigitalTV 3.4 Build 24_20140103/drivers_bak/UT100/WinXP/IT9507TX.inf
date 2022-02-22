@@ -1,0 +1,174 @@
+; Copyright (C) 2006-2012 ITE Technologies, Inc.
+
+[Version]
+signature="$CHICAGO$"
+Class=Media
+ClassGUID={4d36e96c-e325-11ce-bfc1-08002be10318}
+Provider=%MfgName%
+DriverVer=07/09/2012,12.7.9.1
+CatalogFile=IT9507TX.cat
+
+[DestinationDirs]
+IT9507BDA.CopyDrivers=10,System32\Drivers
+
+[SourceDisksNames]
+1=%IT9507BDA.Disc%,,,
+
+[SourceDisksFiles]
+IT9507TX.sys=1
+
+[Manufacturer]
+%MfgName%=ITE,NTamd64,NTIA64
+
+[ControlFlags]
+ExcludeFromSelect=*
+ExcludeFromSelect.NT=*
+
+[ITE.NTamd64]
+%IT9507BDA.DeviceDesc% = IT9507BDA.Device,USB\VID_048D&PID_9507
+
+[ITE.NTIA64]
+%IT9507BDA.DeviceDesc% = IT9507BDA.Device,USB\VID_048D&PID_9507
+
+[ITE]
+%IT9507BDA.DeviceDesc% = IT9507BDA.Device,USB\VID_048D&PID_9507
+
+
+[IT9507BDA.Device.NT]
+Include    = ks.inf, kscaptur.inf, bda.inf
+Needs      = KS.Registration,KSCAPTUR.Registration.NT,BDA.Installation.NT
+DelReg	   = IT9507BDA.DeleteReg
+;AddReg    = IT9507BDA_DemodInit.AddReg
+AddReg     = IT9507BDA.AddReg
+CopyFiles  = IT9507BDA.CopyDrivers
+
+
+[IT9507BDA.Device.NT.Services]
+Delservice = IT9135BDA, 0x00000002, IT9507BDA.AddService
+Addservice = IT9507BDA, 0x00000002, IT9507BDA.AddService
+
+[IT9507BDA.AddService]
+DisplayName    = %IT9507Devcie.FriendlyName%
+ServiceType    = %SERVICE_KERNEL_DRIVER%
+StartType      = %SERVICE_DEMAND_START%
+ErrorControl   = %SERVICE_ERROR_NORMAL%
+ServiceBinary  = %10%\System32\Drivers\IT9507TX.sys
+LoadOrderGroup = Base
+
+[IT9507BDA.CopyDrivers]
+IT9507TX.sys
+
+[IT9507BDA.DeleteReg]
+HKLM,System\CurrentControlSet\SERVICES\IT9507BDA\DemodInit
+
+
+;[IT9507BDA_DemodInit.AddReg]
+;HKLM,System\CurrentControlSet\SERVICES\IT9507BDA\DemodInit,InitScriptPatch,%REG_DWORD%,0x00
+;HKLM,System\CurrentControlSet\SERVICES\IT9507BDA\DemodInit,2,%REG_EXPAND_SZ%,SERVICE_BOOT_START
+;HKLM,System\CurrentControlSet\SERVICES\IT9507BDA\DemodInit,1,0x00010001,0x9b,0xd5,0x08,0x01
+;HKLM,System\CurrentControlSet\SERVICES\IT9507BDA\DemodInit,2,0x00010001,0x9b,0xd5,0x08,0x01
+
+
+[IT9507BDA.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,IT9507TX.sys
+HKR,,PageOutWhenUnopened,3,01
+HKLM,System\CurrentControlSet\Control\MediaCategories\{1A9333B6-3704-4b18-A6DD-E1979FC56970}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{1A9333B6-3704-4b18-A6DD-E1979FC56970},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{1A9333B6-3704-4b18-A6DD-E1979FC56970},Name,,"Tuner Node"
+HKLM,System\CurrentControlSet\Control\MediaCategories\{F65394A2-A018-4307-8D12-35AA494A406F}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{F65394A2-A018-4307-8D12-35AA494A406F},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{F65394A2-A018-4307-8D12-35AA494A406F},Name,,"Demodulator Node"
+HKLM,System\CurrentControlSet\Control\MediaCategories\{870E4D6F-77E7-4c40-ADE3-BEF8708A9D52}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{870E4D6F-77E7-4c40-ADE3-BEF8708A9D52},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{870E4D6F-77E7-4c40-ADE3-BEF8708A9D52},Name,,"Antenna In Pin"
+
+[IT9507BDA.Device.NT.Interfaces]
+AddInterface=%GUID.TunerCatID%,%KSNAME_Filter%,IT9507BDA.Interfaces,
+AddInterface=%GUID.BdaReceiverCtrl%,%KSNAME_Filter%,IT9507BDA.Interfaces,
+AddInterface=%GUID.TunerCatID%,%KSNAME_Filter2%,IT9507BDA2.Interfaces,
+AddInterface=%GUID.BdaReceiverCtrl%,%KSNAME_Filter2%,IT9507BDA2.Interfaces,
+
+
+
+AddInterface=%KSCATEGORY_WDMSYS%,%GUID_AIRHD_CAPTURE_FILTER%,CaptureInterface.NT,
+
+[CaptureInterface.NT]
+AddReg=avshws.Reader.AddReg,
+[avshws.Reader.AddReg]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%avshws.Reader.FriendlyName%
+
+
+
+
+
+
+
+[IT9507BDA.Interfaces]
+AddReg=IT9507BDA.Interface.AddReg
+
+[IT9507BDA2.Interfaces]
+AddReg=IT9507BDA2.Interface.AddReg
+
+[IT9507BDA.Interface.AddReg]
+HKR,,CLSID,,%IT9507BDA.CLSID%
+HKR,,FriendlyName,,%IT9507BDA.FriendlyName%
+
+[IT9507BDA2.Interface.AddReg]
+HKR,,CLSID,,%IT9507BDA.CLSID%
+HKR,,FriendlyName,,%IT9507BDA2.FriendlyName%
+
+[Strings]
+MfgName                   = "ITE"
+IT9507BDA.CLSID           = "{17CCA71B-ECD7-11D0-B908-00A0C9223196}"
+IT9507BDA.Disc            = "IT9507 BDA Installation Disc"
+IT9507BDA.DeviceDesc      = "IT9507 TX Device"
+IT9507Devcie.FriendlyName = "IT9507 TX Devices"
+IT9507BDA.FriendlyName    = "IT9507 BDA Filter"
+IT9507BDA2.FriendlyName   = "IT9507 BDA Filter"
+KSNAME_Filter           = "{CACACEFD-1B5F-49f4-AF24-0CE559CC1E6D}"
+KSNAME_Filter2          = "{CACACEFD-1B5F-49f4-AF24-0CE559CC1E6E}"
+
+Plugin_BdaDevice        = "BDA Device Control Plug-in"
+GUID.TunerCatID         = "{71985F48-1CA1-11d3-9CC8-00C04F7971E0}"
+AMcatID                 = "{DA4E3DA0-D07D-11d0-BD50-00A0C911CE86}"
+BDAReceivers            = "BDA Streaming Receiver Components"
+MediaCategories         = "SYSTEM\CurrentControlSet\Control\MediaCategories"
+Pin.BdaTransport        = "BDA Transport Stream"
+GUID.BdaTransport       = "{78216A81-CFA8-493e-9711-36A61C08BD9D}"
+GUID.BdaReceiverCtrl    = "{FD0A5AF3-B41D-11d2-9C95-00C04F7971E0}"
+
+; ServiceType values
+SERVICE_KERNEL_DRIVER       = 0x00000001
+SERVICE_FILE_SYSTEM_DRIVER  = 0x00000002
+SERVICE_ADAPTER             = 0x00000004
+SERVICE_RECOGNIZER_DRIVER   = 0x00000008
+SERVICE_WIN32_OWN_PROCESS   = 0x00000010
+SERVICE_WIN32_SHARE_PROCESS = 0x00000020
+SERVICE_INTERACTIVE_PROCESS = 0x00000100
+SERVICE_INTERACTIVE_SHARE_PROCESS = 0x00000120
+
+; StartType values
+SERVICE_BOOT_START          = 0x00000000
+SERVICE_SYSTEM_START        = 0x00000001
+SERVICE_AUTO_START          = 0x00000002
+SERVICE_DEMAND_START        = 0x00000003
+SERVICE_DISABLED            = 0x00000004
+
+; ErrorControl values
+SERVICE_ERROR_IGNORE        = 0x00000000
+SERVICE_ERROR_NORMAL        = 0x00000001
+SERVICE_ERROR_SEVERE        = 0x00000002
+SERVICE_ERROR_CRITICAL      = 0x00000003
+
+; Registry types
+REG_MULTI_SZ                = 0x10000
+REG_EXPAND_SZ               = 0x20000
+REG_DWORD                   = 0x10001
+
+avshws.Reader.FriendlyName="IT9507 TX Filter"
+Proxy.CLSID="{17CCA71B-ECD7-11D0-B908-00A0C9223196}"
+
+GUID_AIRHD_CAPTURE_FILTER = "{9963CC0E-EE70-11E0-BA8F-92D34824019B}"
+KSCATEGORY_WDMSYS="{FBF6F530-07B9-11D2-A71E-0000F8004788}"

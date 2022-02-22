@@ -1,0 +1,39 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EagleAPI", "EagleAPI.vcproj", "{1A3833DC-24D6-4B58-AD11-44253D948D40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{363B604F-4C54-406D-9270-437B5883E809}"
+	ProjectSection(SolutionItems) = preProject
+		EagleAPI.vsmdi = EagleAPI.vsmdi
+		localtestrun.testrunconfig = localtestrun.testrunconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Castor2_Debug|Win32 = Castor2_Debug|Win32
+		Castor2_Debug|Windows Mobile 5.0 Pocket PC SDK (ARMV4I) = Castor2_Debug|Windows Mobile 5.0 Pocket PC SDK (ARMV4I)
+		Castor2_Release|Win32 = Castor2_Release|Win32
+		Castor2_Release|Windows Mobile 5.0 Pocket PC SDK (ARMV4I) = Castor2_Release|Windows Mobile 5.0 Pocket PC SDK (ARMV4I)
+		Debug|Win32 = Debug|Win32
+		Debug|Windows Mobile 5.0 Pocket PC SDK (ARMV4I) = Debug|Windows Mobile 5.0 Pocket PC SDK (ARMV4I)
+		Release|Win32 = Release|Win32
+		Release|Windows Mobile 5.0 Pocket PC SDK (ARMV4I) = Release|Windows Mobile 5.0 Pocket PC SDK (ARMV4I)
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A3833DC-24D6-4B58-AD11-44253D948D40}.Castor2_Debug|Win32.ActiveCfg = Castor2_Debug|Win32
+		{1A3833DC-24D6-4B58-AD11-44253D948D40}.Castor2_Debug|Win32.Build.0 = Castor2_Debug|Win32
+		{1A3833DC-24D6-4B58-AD11-44253D948D40}.Castor2_Debug|Windows Mobile 5.0 Pocket PC SDK (ARMV4I).ActiveCfg = Castor2_Debug|Win32
+		{1A3833DC-24D6-4B58-AD11-44253D948D40}.Castor2_Release|Win32.ActiveCfg = Castor2_Release|Win32
+		{1A3833DC-24D6-4B58-AD11-44253D948D40}.Castor2_Release|Win32.Build.0 = Castor2_Release|Win32
+		{1A3833DC-24D6-4B58-AD11-44253D948D40}.Castor2_Release|Windows Mobile 5.0 Pocket PC SDK (ARMV4I).ActiveCfg = Castor2_Release|Win32
+		{1A3833DC-24D6-4B58-AD11-44253D948D40}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1A3833DC-24D6-4B58-AD11-44253D948D40}.Debug|Win32.Build.0 = Debug|Win32
+		{1A3833DC-24D6-4B58-AD11-44253D948D40}.Debug|Windows Mobile 5.0 Pocket PC SDK (ARMV4I).ActiveCfg = Debug|Win32
+		{1A3833DC-24D6-4B58-AD11-44253D948D40}.Release|Win32.ActiveCfg = Release|Win32
+		{1A3833DC-24D6-4B58-AD11-44253D948D40}.Release|Win32.Build.0 = Release|Win32
+		{1A3833DC-24D6-4B58-AD11-44253D948D40}.Release|Windows Mobile 5.0 Pocket PC SDK (ARMV4I).ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,95 @@
+;
+; VirtualSerialBda.inf
+;
+
+[Version]
+Signature="$Windows NT$"
+Class=Ports
+ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318}
+Provider=%MSFTUMDF%
+CatalogFile=Virtualserialbda.cat
+Compatible=1
+DriverVer=05/12/2016,6.1.7600.16385
+
+[ControlFlags]
+;ExcludeFromSelect = AVSTREAM\VirtualSerialBda.VIRTUAL
+
+[Manufacturer]
+%MSFTUMDF%=Microsoft,NTx86
+
+[Microsoft.NTx86]
+;%VirtualSerialBdaDeviceName%=VirtualSerialBda_Install,AVSTREAM\VirtualSerialBda.VIRTUAL
+%VirtualSerialBdaDeviceName%=VirtualSerialBda_Install, WUDF\VirtualSerialbda
+
+[SourceDisksFiles]
+Virtualserialbda.dll=1
+WudfUpdate_01009.dll=1
+;ITEAPIEX.dll=1
+
+[SourceDisksNames]
+1 = %MediaDescription%
+
+; =================== UMDF VirtualSerialBda Device ==================================
+
+[VirtualSerialBda_Install.NT]
+CopyFiles=UMDriverCopy
+;DelReg= VirtualSerialBda.DeleteReg
+
+; add for supporting .Net API
+[VirtualSerialBda_Install.NT.hw]
+AddReg=VirtualSerialBda_RegistryAdd
+
+[VirtualSerialBda_RegistryAdd]
+HKR,,DeviceType,0x10001,0x0000001b
+
+[VirtualSerialBda.DeleteReg]
+;HKR,"ENUM\AVSTREAM",pnpid,,"VirtualSerialBda.VIRTUAL""
+
+[VirtualSerialBda_Install.NT.Services]
+AddService=WUDFRd,0x000001fa,WUDFRD_ServiceInstall
+
+[VirtualSerialBda_Install.NT.CoInstallers]
+CopyFiles=CoInstallers_CopyFiles
+AddReg=CoInstallers_AddReg
+
+[VirtualSerialBda_Install.NT.Wdf]
+UmdfService=VirtualSerialBda,VirtualSerialBda_Install
+UmdfServiceOrder=VirtualSerialBda
+
+[VirtualSerialBda_Install]
+UmdfLibraryVersion=1.9.0
+ServiceBinary=%12%\UMDF\Virtualserialbda.dll
+DriverCLSID={10B8349D-940F-4489-86F8-1592FD5266B2}
+
+[WUDFRD_ServiceInstall]
+DisplayName = %WudfRdDisplayName%
+ServiceType = 1
+StartType = 3
+ErrorControl = 1
+ServiceBinary = %12%\WUDFRd.sys
+LoadOrderGroup = Base
+
+
+[CoInstallers_CopyFiles]
+WudfUpdate_01009.dll
+;ITEAPIEX.dll
+
+[CoInstallers_AddReg]
+HKR,,CoInstallers32,0x00010000,"WUDFUpdate_01009.dll"
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+[DestinationDirs]
+UMDriverCopy=12,UMDF ; copy to drivers\UMDF
+CoInstallers_CopyFiles=11
+
+[UMDriverCopy]
+Virtualserialbda.dll
+
+; =================== Generic ==================================
+
+[Strings]
+MSFTUMDF="ITE"
+MediaDescription="ITE BDAViewer Return Channel"
+WudfRdDisplayName="ITE BDAViewer Virtual COM"
+VirtualSerialBdaDeviceName="ITE BDAViewer Virtual COM port"
+

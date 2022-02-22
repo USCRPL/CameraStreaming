@@ -1,0 +1,475 @@
+__________________________________________________________________
+
+		Omega2 Windows USB driver release
+__________________________________________________________________
+
+Driver		: V15.11.09.1
+Omega Firmware	: V1_0_26_2
+Omega2 Firmware	: 
+Omega2I Firmware: V3_30_0_0_I
+API		: v.2.3.20150112.0
+
+Changes & bugs fixed:
+
+* Add KMHz bandwidth interface support
+
+-----------------------------------------------------------------
+
+Driver		: V15.10.20.1
+Omega Firmware	: V1_0_26_2
+Omega2 Firmware	: 
+Omega2I Firmware: V3_30_0_0_I
+API		: v.2.3.20150112.0
+
+Changes & bugs fixed:
+
+* Add GetDeviceMode and GetSignalStrengthEx interface for DCA mode
+
+-----------------------------------------------------------------
+
+Driver		: V15.09.01.1
+Omega Firmware	: V1_0_26_2
+Omega2 Firmware	: 
+Omega2I Firmware: V3_30_0_0_I
+API		: v.2.3.20150112.0
+
+Changes & bugs fixed:
+
+* Update Omega2 FW for test
+
+-----------------------------------------------------------------
+
+Driver		: V15.07.30.1
+Omega Firmware	: V1_0_26_2
+Omega2 Firmware	: 
+Omega2I Firmware: V3_30_0_0_I
+API		: v.2.3.20150112.0
+
+Changes & bugs fixed:
+
+* Update Omega2 FW for test
+
+-----------------------------------------------------------------
+
+Driver		: V15.03.17.1
+Omega Firmware	: V1_0_26_2
+Omega2 Firmware	: V3_31_0_0
+Omega2I Firmware: V3_30_0_0_I
+API		: v.2.3.20150112.0
+
+Changes & bugs fixed:
+
+* Update FW
+
+-----------------------------------------------------------------
+
+Driver		: V15.01.12.1
+Omega Firmware	: V1_0_26_2
+Omega2 Firmware	: V3_25_0_0
+Omega2I Firmware: V3_30_0_0_I
+API		: v.2.3.20150112.0
+
+Changes & bugs fixed:
+
+* Update API and FW
+* Add set Decryp (ITEAPIEX_Testkit_v14.11.24.1)
+
+-----------------------------------------------------------------
+
+Driver		: V14.09.12.1
+Omega Firmware	: V1_0_26_2
+Omega2 Firmware	: V3_25_0_0
+Omega2I Firmware: V3_26_0_0_I
+API		: v.2.3.20131218.0
+
+Changes & bugs fixed:
+
+* Update API and FW
+* Fix global variable
+
+-----------------------------------------------------------------
+
+Driver      	  : V12.11.14.1
+Omega2   Firmware : V3_10_1_0
+Omega1   Firmware : V1_0_26_2
+Multi-RX Firmware : V3_15_0_0_I
+API	 	  : 2.3.20120831.0
+
+Changes & bugs fixed:
+
+* Update Multi-Channel RX's FW to V3_15_0_0_I.
+
+
+Known Issue:
+* DCA cannot lock issue (lower) after burn-in test. 
+  (After V11.10.11.1 can not re-produce problem)
+
+-----------------------------------------------------------------
+
+Driver   	: V12.10.30.1
+Omega2 Firmware : V3_10_1_0
+Omega1 Firmware : V1_0_26_2
+API	 	: 2.3.20120831.0
+
+Changes & bugs fixed:
+
+* Support selective suspend according EEProm config. If it does't
+  		  have EEprom, default is ON.
+
+* Support Multi-Channel RX's FW and API.
+
+
+Known Issue:
+* DCA cannot lock issue (lower) after burn-in test. 
+  (After V11.10.11.1 can not re-produce problem)
+
+-----------------------------------------------------------------
+
+Driver   	: V12.07.27.1
+Omega2 Firmware : V3_10_1_0
+Omega1 Firmware : V1_0_26_2
+API	 	: 2.3.20110426.0
+
+Changes & bugs fixed:
+
+* Fix number of IRPs based on V12.02.03.1.
+
+Known Issue:
+* DCA cannot lock issue (lower) after burn-in test. 
+  (After V11.10.11.1 can not re-produce problem)
+
+-----------------------------------------------------------------
+
+Driver   	: V12.07.06.1
+Omega2 Firmware : V3_10_1_0
+Omega1 Firmware : V1_0_26_2
+API	 	: 2.3.20110426.0
+
+Changes & bugs fixed:
+
+* Based on V12.02.03.1 for WIN8 WHCK.
+
+Known Issue:
+* DCA cannot lock issue (lower) after burn-in test. 
+  (After V11.10.11.1 can not re-produce problem)
+
+-----------------------------------------------------------------
+
+Driver   	: V12.03.14.1
+Omega2 Firmware : V3_11_0_0_BypassScan
+Omega1 Firmware : V1_0_26_2
+API	 	: 2.3.20110426.0
+
+Changes & bugs fixed:
+
+* Update FW to V3_11_0_0_BypassScan
+
+Known Issue:
+* DCA cannot lock issue (lower) after burn-in test. 
+  (After V11.10.11.1 can not re-produce problem)
+
+-----------------------------------------------------------------
+
+Driver   	: V12.02.03.1
+Omega2 Firmware : V3_10_1_0
+Omega1 Firmware : V1_0_26_2
+API	 	: 2.3.20110426.0
+
+Changes & bugs fixed:
+
+* Wirte 0x80 for OFDM reg. 0xFB2B when init done.
+
+Known Issue:
+* DCA cannot lock issue (lower) after burn-in test. 
+  (After V11.10.11.1 can not re-produce problem)
+
+-----------------------------------------------------------------
+
+Driver   	: V11.12.07.1
+Omega2 Firmware : V3_10_1_0
+Omega1 Firmware : V1_0_26_2
+API	 	: 2.3.20110426.0
+
+Changes & bugs fixed:
+
+* Update Omega1 FW to V1_0_26_2.
+
+Known Issue:
+* DCA cannot lock issue (lower) after burn-in test.
+
+-----------------------------------------------------------------
+
+
+Driver   : V11.11.23.1
+Firmware : V3_10_1_0
+API	 : 2.3.20110426.0
+
+Changes & bugs fixed:
+
+* Update FW to V3_10_1_0.
+
+Known Issue:
+* DCA cannot lock issue (lower) after burn-in test.
+
+-----------------------------------------------------------------
+
+Driver   : V11.11.04.1
+Firmware : V3_9_1_0
+API	 : 2.3.20110426.0
+
+Changes & bugs fixed:
+
+* Update FW to V3_9_1_0.
+
+Known Issue:
+* DCA cannot lock issue (lower) after burn-in test.
+
+-----------------------------------------------------------------
+
+Driver   : V11.11.03.1
+Firmware : V3_9_0_0
+API	 : 2.3.20110426.0
+
+Changes & bugs fixed:
+
+* Update FW to V3_9_0_0.
+
+Known Issue:
+* DCA cannot lock issue (lower) after burn-in test.
+
+-----------------------------------------------------------------
+
+Driver   : V11.10.19.1
+Firmware : V3_7_0_0
+API	 : 2.3.20110426.0
+
+Changes & bugs fixed:
+
+* Fix IR bug without EEPROM.
+* This driver version is based on V11.09.02.1
+
+Known Issue:
+* DCA cannot lock issue (lower) after burn-in test.
+
+-----------------------------------------------------------------
+
+Driver   : V11.10.11.1
+Firmware : V3_8_0_0
+API	 : 2.3.20110426.0
+
+Changes & bugs fixed:
+
+* It can not reproduce DCA issue.
+* Fix kernel hang problem when TS data in for Fresco USB 3.0.  
+
+Known Issue:
+* DCA cannot lock issue (lower) after burn-in test. (FIX)
+
+-----------------------------------------------------------------
+
+Driver   : V11.09.23.1
+Firmware : V3_8_0_0
+API	 : 2.3.20110426.0
+
+Changes & bugs fixed:
+
+* Firmware update to 3.8.0.0.  
+
+Known Issue:
+* DCA cannot lock issue (lower) after burn-in test.
+
+-----------------------------------------------------------------
+
+Driver   : V11.09.02.1
+Firmware : V3_7_0_0
+API	 : 2.3.20110426.0
+
+Changes & bugs fixed:
+
+* Modify Omega1 firmware.h error. 
+* Adjust signal strength value for replaying to WIN7 
+
+Known Issue:
+* DCA cannot lock issue (lower) after burn-in test.
+
+-----------------------------------------------------------------
+
+Driver   : V11.08.02.1
+Firmware : V3_7_0_0
+API	 : 2.3.20110426.0
+
+Changes & bugs fixed:
+
+* Firmware update to 3.7.0.0.  
+
+Known Issue:
+* DCA cannot lock issue (lower) after burn-in test.
+
+-----------------------------------------------------------------
+
+Driver   : V11.07.04.1
+Firmware : V3_5_0_0
+API	 : 2.3.20110426.0
+
+Changes & bugs fixed:
+
+* Firmware update to 3.5.0.0.  
+
+Known Issue:
+* DCA cannot lock issue (lower) after burn-in test.
+
+-----------------------------------------------------------------
+
+Driver   : V11.06.24.1
+Firmware : V3_3_0_0
+API	 : 2.3.20110426.0
+
+Changes & bugs fixed:
+
+* If any AP on, it will power on two demods and turners. (the same with OMEGAI sequence)
+  Then set the same frequency when AP on first time.
+* Adjust SHIFT operations for calculating FW version.   
+
+Known Issue:
+* DCA cannot lock issue (lower) after burn-in test.
+
+-----------------------------------------------------------------
+
+Driver   : V11.05.23.1
+Firmware : V3_3_0_0
+API	 : 2.3.20110426.0
+
+Changes & bugs fixed:
+* Firmware update to 3.3.0.0.
+* If any AP on, it will power on two demods and turners. (the same with OMEGAI sequence)
+  Then set the same frequency when AP on first time.  
+* Note that Fireware is TEST version based on V3.3.0.0 
+  (Verison variable1 is 255. It maybe produce shifting operation problem in 64bits environment)
+
+Known Issue:
+* DCA cannot lock issue (lower) after burn-in test.
+
+-----------------------------------------------------------------
+
+Driver   : V11.05.20.1
+Firmware : V3_2_0_0
+API	 : 2.3.20110426.0
+
+Changes & bugs fixed:
+* Firmware update to 3.2.0.0.
+
+
+Known Issue:
+* DCA cannot lock issue (lower) after burn-in test.
+
+-----------------------------------------------------------------
+Driver   : V11.04.26.1
+Firmware : V3_1_1_0
+API	 : 2.3.20110426.0
+
+Changes & bugs fixed:
+* Firmware update to 3.1.1.0.
+* API update to 2011.4.26.0.
+
+Known Issue:
+* DCA cannot lock issue (lower) after burn-in test.
+
+-----------------------------------------------------------------
+
+Driver   : V11.04.22.1
+Firmware : V3_1_0_0
+API	 : 2.3.20110421.2
+
+Changes & bugs fixed:
+* Firmware update to 3.1.0.0.
+* API update to 2011.4.21.2.
+* Fix 2'st tuner init incomplete bug in API.
+* Fix AP on/off RACE condition problem in PIP mode.
+* Fix checksum ERROR when AP-off (two filters will repeat to do power saving).
+* Fix Checksum status error(I2C master error) when IC suspend/resume burn-in test with PIP/DCA mode.
+* Patch for AP can not change state when system suspend (avoid checksum ERROR).
+* Patch for Omega1 packet lost problem when set PIP mode.
+* Patch for Omega1 Reboot Sequence.
+
+Known Issue:
+* DCA cannot lock issue (lower) after burn-in test.
+
+-----------------------------------------------------------------
+
+Driver   : V11.04.11.1
+Firmware : V3_0_0_0
+API	 : 2.3.20110225.0
+
+Changes & bugs fixed:
+* Update FW to V3_0_0_0.
+* Add new feature - Remote Wakeup.
+* Mark some turner IDs (0x61, 0x62) temporary to avoid blue screen.
+* When device Init, it will check EEPROM valid bit.
+* Add 50 milliseconds delay to AcquireChannel and Powersaving functions.
+* When SetArchitecture function switch PIP to DCA, it will set 500MHz empty frequency and turn off retrain.
+
+Known Issue:
+* DCA cannot lock after burn-in test.
+* Checksum error(I2C master error) when IC suspend/resume burn-in test with PIP/DCA mode.
+
+-----------------------------------------------------------------
+
+Driver   : V11.03.02.1
+Firmware : V2_3_0_0
+API	 : 2.3.20110225.0
+
+Changes & bugs fixed:
+* Omega2 ECO first release.
+* Update API to 2.3.20110225.0.
+* Update FW to V2_3_0_0.
+
+Known Issue:
+
+-----------------------------------------------------------------
+
+Driver   : V10.01.27.1
+Firmware : V2_2_0_0
+API	 : 2.2.20101130.0
+
+Changes & bugs fixed:
+* Update FW to V2_2_0_0.
+
+Known Issue:
+Fresco USB3.0 BSOD (is caused by IRP) 
+
+-----------------------------------------------------------------
+
+Driver   : V10.12.23.1
+Firmware : V2_0_0_0
+API	 : 2.2.20101130.0
+
+Changes & bugs fixed:
+* Support PIP and DCA mode.
+
+Known Issue:
+Fresco USB3.0 BSOD (is caused by IRP) 
+
+-----------------------------------------------------------------
+
+Driver   : V10.12.07.1
+Firmware : V2_0_0_0
+API	 : 2.2.20101130.0
+
+Changes & bugs fixed:
+* FW update
+
+Known Issue:
+Fresco USB3.0 BSOD (is caused by IRP) 
+
+-----------------------------------------------------------------
+
+Driver   : V10.11.30.1
+Firmware : V1_0_0_0
+API	 : 2.2.20101130.0
+
+Changes & bugs fixed:
+
+Known Issue:
+Fresco USB3.0 BSOD (is caused by IRP) 
+
+-----------------------------------------------------------------

@@ -1,0 +1,19 @@
+1.	Export compiler toolchain path
+export CROSS_COMPILE=/home/user/Desktop/driver/Eagle/gcc-linaro-arm-linux-gnueabihf-4.8-2014.04_linux/bin/arm-linux-gnueabihf-
+
+2.	Modify the Makefile of driver
+KDIR = /home/user/Desktop/driver/Eagle/linux-altera_4.6
+
+make -s -C $(KDIR) SUBDIRS=$(PWD) ARCH=arm modules
+
+
+Q&A
+
+
+Q1. After source code compilation,can we move the source code to /usr/src or not as like in the case of raspberry pi http://oz9aec.net/technology/dvb/building-the-ut-100-driver-on-the-raspberry-pi
+A:
+Source code could be put to any folder and Makefile needed to appoint it.
+Q2.In the Makefile we are putting uname -r,but it is taking directly ubuntu kernel version not my kernel version,how can i fix this
+A:
+Makefile doesn¡¦t use the uname ¡Vr for compiling.
+KDIR /home/user/Desktop/driver/Eagle/linux-altera_4.6

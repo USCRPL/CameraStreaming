@@ -1,0 +1,10 @@
+CaptureDesktopSource.ax
+ImageResizer.ax
+H264VideoEncoder.ax 
+Mpeg2VideoEncoder.ax
+imc_mpa_enc_ds.dll
+imc_aac_enc_ds.dll
+mc_enc_mpa_ds.ax
+TsMuxer.ax
+NullRenderer.ax
+SubtitleEncoder.ax

@@ -1,0 +1,80 @@
+20181005
+1.it913x_linux_v18.05.21.1 update
+Fix Ubuntu kernel 4.14 ¦³compile error
+2. Windows update IT913x_Windows_Driver_v17.06.22.1_itesign
+(If driver install failed in WIN10, please disable "Security boot" option in BIOS.) 
+
+
+20180526
+1.it913x_linux_v18.05.21.1
+
+
+20170417
+1. Linux update it913x_linux_v17.12.05.1
+2. Windows update IT913x_Windows_Driver_v17.06.22.1_itesign
+3. BDAViewer+ v2500
+
+20161107
+1. Linux update it913x_linux_v16.11.07.1
+
+20161013
+1. Linux update it913x_linux_v16.09.22.1
+Tuner ID=>0x63, for new DCA tuner firmware
+Refer to Program guide (3.3.7.2 Modify EEPROM value)
+2. Widnows update it913x_linux_v16.08.12.1
+Tuner ID=>0x63, for new DCA tuner firmware
+
+
+
+20160819
+1. Linux update it913x_linux_v16.08.12.1
+2. BDAViewer update v2.4.9.2
+
+20160520
+1.BDAViewer update v2.4.7.0
+
+20160516
+1.BDAViewer update v2.4.7.0
+
+
+20160318
+1.BDAViewer update v2.4.4.0
+2.Linux Driver update to it913x_linux_v16.01.22.1
+
+20151207
+1.BDAViewer update v2.4.0.0
+
+
+20151111
+1.Linux driver update
+- Sync software and hardware USB urb size to #define User_USB20_FRAME_SIZE
+- Add error check for copy_from/to_user function
+2. Windows driver update to v15.11.09.1
+
+
+20151022
+1.Linux driver update
+	- Report the strength status of 2 chips for DCA mode.
+	- Register one driver handle at DCA mode
+        - Add copy_from/to_user function to ioctl interface
+2.BDAViewer update
+
+20150826
+BDAViewer update
+
+20150728
+Chip Datasheet & Programming guide
+
+20150525
+BDAviewer+ update
+
+20150515
+1. Linux driver support Support kernel 3.17.0 ~ 4.0.0
+2. BDAviewer+ update to v2370
+
+20150327
+Windows & Linux driver update
+
+
+20150225
+Linux driver

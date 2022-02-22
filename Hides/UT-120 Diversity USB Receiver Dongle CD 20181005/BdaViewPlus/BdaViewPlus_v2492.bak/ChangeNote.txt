@@ -1,0 +1,217 @@
+Release v2_4_9_2:
+
+* Updated default channel list of Taiwan.
+* Remove carriage return (0x0d) at GPS log.
+* Fix AP crash issue due to COM port no any descriptor
+
+
+V2_4_9_1:
+* Change the GPS info UI from Jeff's suggestion(20160624 mail).
+* Add signal strength for DibCom..
+* Add DCASM info for DCA upper device(updated ITEAPIEX.dll).
+
+V2_4_9_0:
+* Merge GPS lib(20160620) to show GPS info. 
+	- UI add latest Longitude and Latitude / user input and auto calculate.
+	- Log GPS raw data to file.
+* Support file playback mode.
+	- Add file seeking function(v2481 no support).
+* Add pid info of Audio/Video in status bar.
+
+V2_4_8_0:
+* Merge GPS lib to show GPS info.
+* Do not show Endeavour virtual com at Uart Demux dialog.
+* Auto install filter AddPat.ax to solve version compatible with Return Channel GUI.
+
+V2_4_7_0:
+* Add BdaVirtualcom driver. When receive uart muxer data, them will be send to BdaVirtualcom driver.
+* Display related dialog at signal statistics for ITE or DiBcom device.
+* Change Uart-demux dialog to modal-less window.
+
+V2_4_6_0:
+* Support signal statistics for DibCom device..
+* Add Inter-Process Communication method to output Urat-Muxer data (GPS) for other AP.
+
+V2_4_5_0:
+* Merge PCR re-stamp function at TS analyzer.
+* Add callback function to output Uart-Muxer data(GPS) for other AP.
+
+V2_4_4_0:
+* Support H.265 stream type(Add h.265 decoder: ehevcdec.ax ).
+
+V2_4_3_0:
+* Remove and un-register AC3 filter to fix sample rate not correct when render audio.
+	(remove 3 files: ac3filter.ax, ac3filter_intl.dll and BugTrap.dll)  
+
+V2_4_2_0:
+* Support Dibcom device as default(DIB9090).
+* Support TS analyzer for dual Tx device.
+
+V2_4_1_0:
+* Add Tuner gain information(LYR_EN, MOB_TH and NO_SCAN).
+* Support Dual mode.
+	- Add filter Ts2Pcm.ax.
+	- Add stream type "pcm" and related control for switch to/from dual channel.
+	- Show sample rate.
+	- Change dual mode scan UI.
+
+V2_4_0_0:
+* Support signal strength for DCA(Updated DLL).
+* Support character code converter(Merge from James code).
+* Support Tuner gain information(LYRA, LNA, PGC, PGA1 and PGA2).
+* Update ac3filter.ax to fix g711 glitch issue (new ac3filter.ax need BugTrap.dll).
+
+V2_3_9_0:
+* Support ISDBT signal statistics.
+* RF decryption enable that become effective, no need to select channel.
+
+V2_3_8_0:
+* Change max channel of  each frequency from 32 to 64. 
+* Support UART data demux
+	- Console plain text output.
+	- COM port output.
+* Support bandwidth: 1.5M & 2.5M.
+* Fix AP cannot run when audio device no ready.
+
+V2_3_7_0:
+*  Updated Taiwan channel table.
+*  PIP support when device count more than 2.
+*  Audio G711 support.
+* Support partial AES decryption.
+
+V2_3_6_0:
+* Support TPS decryption.
+	- Add TPS Enable/Key fields in toolbar.
+	- Updated dll to support TPS decryption function.
+* Show video resolution, frame rate and stream type.
+
+V2_3_5_0:
+* Support Endeavor's filter.
+* Show the data rate of modulation @ signal statistics. 
+
+V2_3_4_0:
+* Support 1-seg for IT9175 / IT9179.
+* Show BW/Freq @ signal statistics.
+* Log the PCR time(RX) and compare with 8051 time(TX). Add on/off control and time interval of log in registry.
+* Updated file install.exe from James.
+
+V2_3_3_0:
+* Cancel the SampleTime when scan to support the Realtek dongle.
+* BdaViewer+ default support the Realtek dongle(registry 'Support3rdDevice' setting same as ITE device). 
+
+V2_3_2_0:
+* Support the another Samba type (0x9171) is ite device.
+* Support MJPEG stream type.
+ - Add ITE Grabber filter.
+ - Add PICVideo MJPEG decoder.
+
+V2_3_1_0:
+* Add a registry to decide whether support non-ITE device.
+ - If ITE device and non-ITE device is plug-in. the registry should be 'false'.
+ - If desire to support non-ITE device, the registry should be 'true'(the case ITE device can not plug-in). 
+
+V2_3_0_0:
+* Support Cell ID info in signal statistics.
+* Support 1-seg stream of ISDB-T (Add PAT filter).
+* Remove the compiler option (DIGITALWATCH_SCAN, DIGITALWATCH_CONNECT and ITE_MULTI_DEVICE). 
+
+V2_2_9_6:
+* Fix installer for Win7 (no need to enter administrator mode).
+* Show RF power in signal statistics and constellation, CR, GI, FFT.
+* Updated the ITEAPIEX.dll to support Tx filter(previous version--20120628 only support Rx filter).
+* Fix Analyze bug when pidfilter enable(due to PCR's pid no pass, the related file handle no create). 
+
+V2_2_9_5:
+* Support the another Samba type (0x9179) is ite device.
+* Show the bandwidth in channel list.
+
+V2_2_9_4:
+* Support bandwidth with 1M in Frequency Scan.
+* Support bandwidth with 1M, 2M, 3M and 4M in Capture Single Frequency TS.
+* Fix crash issue during ending state of spectrum analysis.
+
+V2_2_9_3:
+* Fix somw pc can not analysis PCR data due to open file fail, use CreateFile to instead of the fopen.
+
+V2_2_9_2:
+* Change the item name of PCR analysis (PcrDiff --> PktTime, PcrErr --> PcrDiff). 
+
+V2_2_9_1:
+* Support bandwidth with 2M, 3M and 4M.
+* Separate the channel scan and spectrum tool (no scan PAT / PMT / SDT / NIT in the spectrum analysis).
+* Show spectrum live chart when scanning. 
+
+V2_2_9_0:
+* Show Channel number with Channel Scan Frequency.
+* Add Schedule recording function.
+* Add Spectrum analysis function.
+* Support omega2 with force mobile mode.
+* Add PCR parser function.
+* Support Eagle2 device.
+* Cancel EPG function.
+
+V2_2_8_0:
+* Updated the default channel list of Taiwan.
+
+V2_2_7_0:
+* Fix only pass itself pmtpid of program to solve some application can't play the captured TS file when PID filter enable.
+* Updated the ITEAPIEX.dll to support the read/write register of LL & OFDM.
+
+V2_2_6_0:
+* Full screen support.
+* The ITE devices support from 4 to 16.
+* Support the Eagle(0x9507) is ite device.
+
+V2_2_5_0:
+* Support Benny's frequency table as country scan.
+* Support AC3 audio decoder. 
+* Save the channel list after scan(previous save channel list timing only at close the AP.)
+
+V2_2_4_0:
+* Solve chanel index is 0xFFFFFFFF issue when user select the invalid channel.
+
+V2_2_3_0:
+* Solve the SD/HD channel change too slow issue (Due to the repeat to call the pause/stop function before disconnect video/audio pin).
+ 
+V2_2_2_0:
+* Change MPEG2 decoder from Elecard to Cyberlink to solve new PC/NB can't display video problem if OS is XP.
+
+V2_2_1_0:
+* Fix the signal strength bug in the Win7 (driver also fix it).
+* Fix crash issue when scan the frequency without any PAT/PMT table.
+* Fix the 'unable to set video window' issue when no select any channel during launch AP.
+* No check the TSID when only has PAT/PMT table but doesn't has SDT table.
+* Add TEI error in the log of TS analyze.
+* Fix duplicate channel issue when TPS is lock and MPEG2 isn't lock.
+
+V2_2_0_0:
+* Provide the ListCintrol component(UI) to display the EPG information.
+* Fix the window can't display bug when user min the window then close it.
+* Support PIP mode when select the second filter.
+* Increase the filter index as a API argument of ITEAPIEX.dll.
+* Save the PidFilterEnable status in registry, restore it when launch the AP.
+* Support the samba(0x9175) is ite device.
+* Support AP to detect the system suspend event.  
+
+V2_1_0_0:
+* Add fake program name if TS only has PAT/PMT table, doesn't has NIT/SDT table. 
+* Add the EPG filter/function.
+* Add subtitle type/pid in the program list, then support the SubTitle filter/function.
+* Support device selection if there are multiple DVB-T filters.
+* The channel list has been extended from 100 to 400.
+
+V2_0_0_0:
+* Support the DibCom device which demod is export to 2 filter(ITE is 1 filter).
+* The ITEAPIEX.dll only support the ITE device.
+* Change the found device logic.
+* Change the scan channel method(use the MPEG-2 Section/Table interface to scan instead of TIF interface).
+* Change the filter flow to support H264/AAC/HEAAC stream type.
+* Add the Video/Audio stream type in ChannelList.ini and provide the version check to delete the old file.
+* Support program change between Mpeg2/H264 and Mpeg2-Audio/Heaac/Aac.
+* The Running Object Table is determined by registry.
+* Add the code mapping for ISDB-T(use the system management descriptor).
+* Add PSI map table for g_ITEAPI_SetPidMap function, previous only add audio/video pid.
+
+V1_2_0_0:
+* Support time out for weak signal when capture TS.
+* Support the cancel of capturing TS(un-check the box).

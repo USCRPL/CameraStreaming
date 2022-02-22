@@ -1,0 +1,7 @@
+1.	Export compiler toolchain path
+export CROSS_COMPILE=/home/user/Desktop/driver/Eagle/gcc-linaro-arm-linux-gnueabihf-4.8-2014.04_linux/bin/arm-linux-gnueabihf-
+
+2.	Modify the Makefile of driver
+KDIR = /home/user/Desktop/driver/Eagle/linux-altera_4.6
+
+make -s -C $(KDIR) SUBDIRS=$(PWD) ARCH=arm modules

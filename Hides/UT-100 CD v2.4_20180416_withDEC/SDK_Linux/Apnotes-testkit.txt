@@ -1,0 +1,5 @@
+When open testkit, please use "sudo" in administrator's privilege.
+Ex. sudo ./it950x_testkit_tx
+
+If any problem, use "dmesg" command to dump log message.
+

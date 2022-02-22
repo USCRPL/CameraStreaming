@@ -1,0 +1,6 @@
+****** The Multi-Frequency List ******
+
+Freq(KHz),	BW(MHz),	Post VTB-BER,	RSD-Abort
+426000,		8.0,			2.23e-004,		56
+
+****** File End ******

@@ -1,0 +1,183 @@
+//**********************************************************************
+// 1.2.20130606.0
+//**********************************************************************
+1.update API to 1.2.20130606.0
+//**********************************************************************
+// 1.1.20121229.0
+//**********************************************************************
+1.modify IT9507_setIQtable (modulator,IQ_table_ptr,tableGroups) 
+2.Add struct CalibrationInfo{} & modify Modulator{} struct 
+3.remove static array : IQ_table[][]
+
+//**********************************************************************
+// 1.1.20121221.0
+//**********************************************************************
+1.	Control bus 
+	¥Ò¡B	Separate bus driver codes from API
+	¤A¡B	IT9507_setBus  -> EagleUser_setBus ?
+	¤þ¡B	EagleUser_busTx ()/Dword EagleUser_busRx ()?
+	¤B¡B	Remove BusDescription busDesc[] & CmdDescription cmdDesc[]?
+2.	Remove original GPIO management mechanism
+3.	New fuctions, EagleUser_Initialization, EagleUser_finalize
+4.	External LO adf4351  & RF filter 
+	¥Ò¡B	Put ext lo (adf4351) settings and RF filter code in EagleUser_acquireTxChannel in modulatorUser.cpp
+	¤A¡B	Call EagleUser_acquireTxChannel when set frequency(acquireTxChannel()
+	¤þ¡B	GPIO init in EagleUser_Initialization
+5.	IQ calibration table: keep only one table
+	¥Ò¡B	Sample code in test kit to load custom IQ calibration table?
+
+
+
+//**********************************************************************
+// 1.1.20121205.0
+//**********************************************************************
+1.Add SystemConfig struct & IT9507_setSystemConfig() to set GPIO setting
+
+SystemConfig struct:
+	typedef struct {
+		GPIO	restSlave;
+		GPIO	rfEnable;
+		GPIO	loClk;
+		GPIO	loData;
+		GPIO	loLe;
+		GPIO	lnaPowerDown;
+		GPIO	irDa;
+		GPIO	uvFilter;
+		GPIO	chSelect3;
+		GPIO	chSelect2;
+		GPIO	chSelect1;
+		GPIO	chSelect0;
+		GPIO	powerDownSlave;
+		GPIO	uartTxd;
+		GPIO	muxSelect;
+	} SystemConfig;
+
+init GPIO:
+i.	
+	SystemConfig EVB01v02Config;
+	EVB01v02Config.restSlave	= GPIOH1;
+	EVB01v02Config.rfEnable		= GPIOH2;
+	EVB01v02Config.loClk		= GPIOH3;
+	EVB01v02Config.loData		= GPIOH4;
+	EVB01v02Config.loLe		= GPIOH5;
+	EVB01v02Config.lnaPowerDown	= GPIOH6;
+	EVB01v02Config.irDa		= GPIOH7;
+	EVB01v02Config.uvFilter		= GPIOH8;
+
+	eagle.systemConfig = EVB01v02Config;	
+	error = IT9507_initialize ((Modulator*) &eagle, tsin_streamType);
+ii.	
+	SystemConfig EVB01v02Config;
+	EVB01v02Config.restSlave	= GPIOH1;
+	EVB01v02Config.rfEnable		= GPIOH2;
+	EVB01v02Config.loClk		= GPIOH3;
+	EVB01v02Config.loData		= GPIOH4;
+	EVB01v02Config.loLe		= GPIOH5;
+	EVB01v02Config.lnaPowerDown	= GPIOH6;
+	EVB01v02Config.irDa		= GPIOH7;
+	EVB01v02Config.uvFilter		= GPIOH8;
+
+	error = IT9507_setSystemConfig ((Modulator*) &eagle, EVB01v02Config);	
+//**********************************************************************
+// 1.0.20121009.0
+//**********************************************************************
+1.modify eagle API for Channel table update(modify Eagle_getDefaultChannelSetting)
+//**********************************************************************
+// 1.0.20120831.0
+//**********************************************************************
+1.modify eagle API for PSI table(Increase the timer range max 65535ms)
+//**********************************************************************
+// 1.0.20120810.0
+//**********************************************************************
+1.Add IT9507_getGainRange() :get max/min gain value
+2.Add IT9507_setTPS/IT9507_getTPS() : set/get TPS (ex:cell id..) 
+3.Add IT9507_suspendMode() :SW suspend function 1:suspend mode/0: resume 
+4.IT9507_getOutputGain get current output gain
+5.LPF default value change 
+6.remone enableTx() when set channel 
+7.Add 9035U2I interface
+//**********************************************************************
+// 1.0.20120718.0
+//**********************************************************************
+1. support BW=1MHz,1.5MHz,2MHz
+2. support Load IQ table from File(Load to eagle->IQ_tableEx[0][0])
+   (Priority: Load file->User setting->EEPROM setting->User.h define)
+3. Bin file format : see "IQ fixed table bin file format.doc"
+//**********************************************************************
+// 1.0.20120709.0
+//**********************************************************************
+1.Fixed BSOD problem 
+//**********************************************************************
+// 1.0.20120703.0
+//**********************************************************************
+1.Fixed Vband poor MER issue
+2.support BW:2M/3M/4M
+//**********************************************************************
+// 1.0.20120627.0
+//**********************************************************************
+1.modify eagleTuner.cpp\interpolation() (Hidy edit)
+2.Add IT9507_getDeviceType() Function
+//**********************************************************************
+// 1.0.20120625.0
+//**********************************************************************
+1.modify Eagle_adjustOutputGain() function (return Gain value)
+
+//**********************************************************************
+// 1.0.20120622.0
+//**********************************************************************
+1.Update IQ Calibration Table
+		EVB  : deviceType = 0 : IQ_fixed_table0
+	DB-01-01-V01 : deviceType = 1 : IQ_fixed_table1
+	DB-01-02-V01 : deviceType = 2 : IQ_fixed_table2
+	DB-01-01-V03 : deviceType = 3 : IQ_fixed_table3
+
+//**********************************************************************
+// 1.0.20120606.0
+//**********************************************************************
+1.API & FW update
+2.eagle only API release
+//**********************************************************************
+// 1.0.20120528.0
+//**********************************************************************
+1.API & FW update
+2.update IQ_fixed_table.h (add device type 3 for EVB )
+//**********************************************************************
+// 1.0.20120410.1
+//**********************************************************************
+1.Add IT9507_setDeviceType() function to setting Calibration type
+//**********************************************************************
+// 1.0.20120410.0
+//**********************************************************************
+1.Add eagleTuner.h/eagleTuner.cpp/IQ_fixed_table.h
+2.modify IT9507_RunTxCalibration()
+
+//**********************************************************************
+// 1.0.20120402.0
+//**********************************************************************
+1.Add IT9507_AdjustOutputGain() function
+//**********************************************************************
+// 1.0.20120309.0
+//**********************************************************************
+1.Add Eagle_GetDefaultChannelSetting() & Eagle_GetDefaultModulationSetting() 
+2.remove modulatorextend.cpp/.h(Integrate to IT9507) &  type.h(Integrate to modulatortype)
+
+//**********************************************************************
+// 1.0.20120217.0
+//**********************************************************************
+I.Add function
+1.Eagle struct : add [Byte slaveIICAddr;] to save slave device IIC Addr
+2.ModulatorStatus IT9507_isTsinput (): get TS input stream type form eeprom 
+3.ModulatorStatus IT9507_getRxIICAddr():get slave device IIC Address type form eeprom
+4.ModulatorStatus IT9507_RunTxCalibration(): get calibration value and run calibration
+
+II.modify function
+1. Eagle_selectBandwidth()
+2. IT9507_setBusTuner()
+
+III.remove nonuse function
+
+//**********************************************************************
+// 1.0.20120206.0
+//**********************************************************************
+1. AirHD ASIC API first release
+2. Reference document : " [AirHD API V20120206 change note.xls] "

@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{99a2c8e6-53c2-4be2-bf16-758ff2589c59}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ITEAPIEXTest_TX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="crc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ITEAPIEXTest_TX.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\amextra.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\amfilter.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cache.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\checkbmi.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\combase.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cprop.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ctlutil.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ddmm.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\dllsetup.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\dxmperf.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\fourcc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\measure.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\msgthrd.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mtype.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\outputq.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\perflog.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\perfstruct.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pstream.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pullpin.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\refclock.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\reftime.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\renbase.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\schedule.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\seekpt.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\source.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\streams.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\strmctl.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sysclock.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\transfrm.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\transip.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\videoctl.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vtrans.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\winctrl.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\winutil.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\wxdebug.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\wxlist.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\wxutil.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ITEAPIEXTest_TX.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

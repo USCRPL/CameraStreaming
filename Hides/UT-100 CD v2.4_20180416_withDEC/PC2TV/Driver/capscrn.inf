@@ -1,0 +1,142 @@
+; mirror.inf
+;
+; Installation inf for the Mirror graphics adapter.
+;
+; Copyright (x) 1995-1999 Microsoft Corporation. All rights reserved
+;
+
+[Version]
+Signature="$CHICAGO$"
+Provider=%ITE%
+ClassGUID={4D36E968-E325-11CE-BFC1-08002BE10318}
+Class=Display
+DriverVer=06/26/2012,1.0.0.1
+CatalogFile=capscrn.cat
+
+[DestinationDirs] 
+devModel_Inst.Files.Display = 11 ; \system32
+devModel_Inst.Files.Miniport = 12 ; \system32\drivers
+
+;
+; Driver information
+;
+
+[Manufacturer]
+%ITE%   = Capscrn.Mfg, NTx86, NTamd64
+
+[Capscrn.Mfg.NTx86]
+%AirHDCap% = devModel_Inst, AirHD_Capscrn_HW_Id
+
+[Capscrn.Mfg.NTamd64]
+%AirHDCap% = devModel_Inst, AirHD_Capscrn_HW_Id
+
+;
+; General installation section
+;
+
+[devModel_Inst]
+CopyFiles=devModel_Inst.Files.Miniport, devModel_Inst.Files.Display
+
+;
+; File sections
+;
+
+[devModel_Inst.Files.Miniport]
+capscrn.sys
+
+[devModel_Inst.Files.Display]
+capscrn.dll
+
+
+;
+; Service Installation
+;
+
+[devModel_Inst.Services]
+AddService = capscrn, 0x00000002, devModel_Service_Inst, devModel_EventLog_Inst
+
+[devModel_Service_Inst]
+
+ServiceType = %SERVICE_KERNEL_DRIVER% 
+StartType = %SERVICE_SYSTEM_START% 
+ErrorControl = %SERVICE_ERROR_IGNORE% 
+ServiceBinary = %12%\capscrn.sys 
+LoadOrderGroup = "Video"
+
+[devModel_EventLog_Inst]
+AddReg = devModel_EventLog_AddReg
+
+[devModel_EventLog_AddReg]
+HKR,,EventMessageFile,0x00020000,"%SystemRoot%\System32\IoLogMsg.dll;%SystemRoot%\System32\drivers\capscrn.sys"
+HKR,,TypesSupported,0x00010001,7
+
+
+;
+; Software Installation
+;
+
+[devModel_Inst.SoftwareSettings]
+AddReg = devModel_SoftwareDeviceSettings
+
+[devModel_SoftwareDeviceSettings]
+HKR,, MirrorDriver,                %REG_DWORD%,    1
+HKR,, InstalledDisplayDrivers,     %REG_MULTI_SZ%, capscrn
+HKR,, VgaCompatible,               %REG_DWORD%,    0
+HKR,, Attach.ToDesktop,            %REG_DWORD%,    1
+
+[devModel_Inst.OpenGLSoftwareSettings]
+AddReg = devModel_OpenGLSoftwareSettings
+
+[devModel_OpenGLSoftwareSettings]
+
+;
+; Not currently used:
+;
+
+[devModel_Inst.GeneralConfigData]
+MaximumNumberOfDevices = 1
+KeepExistingDriverEnabled = 1
+
+;
+; Source file information
+;
+[SourceDisksNames.x86]
+1 = %DiskId1%,,,\X86
+
+[SourceDisksNames.amd64]
+1 = %DiskId1%,,,\AMD64
+
+[SourceDisksFiles]
+capscrn.sys=1,,
+capscrn.dll=1,, 
+
+
+[Strings]
+
+;
+; Non-Localizable Strings
+;
+SERVICE_BOOT_START = 0x0 
+SERVICE_SYSTEM_START = 0x1 
+SERVICE_AUTO_START = 0x2 
+SERVICE_DEMAND_START = 0x3 
+SERVICE_DISABLED = 0x4 
+
+SERVICE_KERNEL_DRIVER = 0x1 
+SERVICE_ERROR_IGNORE = 0x0 
+SERVICE_ERROR_NORMAL = 0x1 
+SERVICE_ERROR_SEVERE = 0x2 
+SERVICE_ERROR_CRITICAL = 0x3 
+
+REG_MULTI_SZ   = 0x00010000
+REG_DWORD      = 0x00010001
+
+
+;
+; Localizable Strings
+;
+
+DiskId       = "AirHD Capscrn Installation DISK (VIDEO)"
+ITE    	     = "ITE Tech."
+AirHDCap     = "AirHD Capture Screen Driver"
+

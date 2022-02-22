@@ -1,0 +1,13 @@
+
+Revision History
+
+1.3.3.5
+	1. PAT version code
+
+1.3.2.9 -> 1.3.3.4
+	1. Add DVB 1 MHz bandwidth support.
+	2. Fix ISDB NIT terrestrial delivery descriptor bug, 
+	and add log transmission descriptor to ISDB' SDT 
+	(fixed desc value at this moment until next' patch).      
+1.3.2.5 -> 1.3.2.9
+	1. Fix the capture device related bugs.

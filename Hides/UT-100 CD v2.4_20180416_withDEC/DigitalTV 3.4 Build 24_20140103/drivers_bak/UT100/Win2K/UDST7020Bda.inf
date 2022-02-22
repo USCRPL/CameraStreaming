@@ -1,0 +1,468 @@
+;
+; Installation inf file for DVB-S USB adapter BDA driver
+; Copyright 2005, DTV-DVB
+
+[Version]
+signature	= "$CHICAGO$"
+Class		= Media
+ClassGUID	= {4d36e96c-e325-11ce-bfc1-08002be10318}
+Provider	= %DTV-DVB%
+DriverVer	= 06/29/2006,1.0.3.4
+CatalogFile         = UDST7020bda.cat
+CatalogFile.NTAMD64 = AMD64\UDST7020bda.cat
+CatalogFile.NTIA64  = IA64\UDST7020bda.cat
+
+[Manufacturer]
+%MfgName% = DTV-DVB, NTAMD64, NTIA64
+
+
+[DTV-DVB]
+%UDST7020BDA.DeviceDesc%	= UDST7020BDA.Device,USB\VID_13D3&PID_7020
+%UDST7020BDA.DeviceDesc%	= UDST7020BDA.Device,USB\VID_04B4&PID_8614
+%UDST7020BDA.DeviceDesc%	= UDST7020BDA.Device,USB\VID_04B4&PID_8613
+%UDST7020BDA.DeviceDesc%	= UDST7020BDA.Device,USB\VID_13D3&PID_3208
+%UDST7020BDA.DeviceDesc%	= UDST7020BDA.Device,USB\VID_13D3&PID_3207
+%UDST7020BDA.DeviceDesc%	= UDST7020BDA.Device,USB\VID_13D3&PID_3204
+%UDST7020BDA.DeviceDesc%	= UDST7020BDA.Device,USB\VID_13D3&PID_3203
+
+%UDST7020BDA.DeviceDesc1%	= UDST7020BDA.Device1,USB\VID_13D3&PID_7020
+%UDST7020BDA.DeviceDesc1%	= UDST7020BDA.Device1,USB\VID_04B4&PID_8614
+%UDST7020BDA.DeviceDesc1%	= UDST7020BDA.Device1,USB\VID_04B4&PID_8613
+%UDST7020BDA.DeviceDesc1%	= UDST7020BDA.Device1,USB\VID_13D3&PID_3208
+%UDST7020BDA.DeviceDesc1%	= UDST7020BDA.Device1,USB\VID_13D3&PID_3207
+%UDST7020BDA.DeviceDesc1%	= UDST7020BDA.Device1,USB\VID_13D3&PID_3204
+%UDST7020BDA.DeviceDesc1%	= UDST7020BDA.Device1,USB\VID_13D3&PID_3203
+
+[DTV-DVB.NTAMD64]
+%UDST7020BDA.DeviceDesc%	= UDST7020BDA.Device,USB\VID_13D3&PID_7020
+%UDST7020BDA.DeviceDesc%	= UDST7020BDA.Device,USB\VID_04B4&PID_8614
+%UDST7020BDA.DeviceDesc%	= UDST7020BDA.Device,USB\VID_04B4&PID_8613
+%UDST7020BDA.DeviceDesc%	= UDST7020BDA.Device,USB\VID_13D3&PID_3208
+%UDST7020BDA.DeviceDesc%	= UDST7020BDA.Device,USB\VID_13D3&PID_3207
+%UDST7020BDA.DeviceDesc%	= UDST7020BDA.Device,USB\VID_13D3&PID_3204
+%UDST7020BDA.DeviceDesc%	= UDST7020BDA.Device,USB\VID_13D3&PID_3203
+
+%UDST7020BDA.DeviceDesc1%	= UDST7020BDA.Device1,USB\VID_13D3&PID_7020
+%UDST7020BDA.DeviceDesc1%	= UDST7020BDA.Device1,USB\VID_04B4&PID_8614
+%UDST7020BDA.DeviceDesc1%	= UDST7020BDA.Device1,USB\VID_04B4&PID_8613
+%UDST7020BDA.DeviceDesc1%	= UDST7020BDA.Device1,USB\VID_13D3&PID_3208
+%UDST7020BDA.DeviceDesc1%	= UDST7020BDA.Device1,USB\VID_13D3&PID_3207
+%UDST7020BDA.DeviceDesc1%	= UDST7020BDA.Device1,USB\VID_13D3&PID_3204
+%UDST7020BDA.DeviceDesc1%	= UDST7020BDA.Device1,USB\VID_13D3&PID_3203
+
+
+[DTV-DVB.NTIA64]
+%UDST7020BDA.DeviceDesc%	= UDST7020BDA.Device,USB\VID_13D3&PID_7020
+%UDST7020BDA.DeviceDesc%	= UDST7020BDA.Device,USB\VID_04B4&PID_8614
+%UDST7020BDA.DeviceDesc%	= UDST7020BDA.Device,USB\VID_04B4&PID_8613
+%UDST7020BDA.DeviceDesc%	= UDST7020BDA.Device,USB\VID_13D3&PID_3208
+%UDST7020BDA.DeviceDesc%	= UDST7020BDA.Device,USB\VID_13D3&PID_3207
+%UDST7020BDA.DeviceDesc%	= UDST7020BDA.Device,USB\VID_13D3&PID_3204
+%UDST7020BDA.DeviceDesc%	= UDST7020BDA.Device,USB\VID_13D3&PID_3203
+
+%UDST7020BDA.DeviceDesc1%	= UDST7020BDA.Device1,USB\VID_13D3&PID_7020
+%UDST7020BDA.DeviceDesc1%	= UDST7020BDA.Device1,USB\VID_04B4&PID_8614
+%UDST7020BDA.DeviceDesc1%	= UDST7020BDA.Device1,USB\VID_04B4&PID_8613
+%UDST7020BDA.DeviceDesc1%	= UDST7020BDA.Device1,USB\VID_13D3&PID_3208
+%UDST7020BDA.DeviceDesc1%	= UDST7020BDA.Device1,USB\VID_13D3&PID_3207
+%UDST7020BDA.DeviceDesc1%	= UDST7020BDA.Device1,USB\VID_13D3&PID_3204
+%UDST7020BDA.DeviceDesc1%	= UDST7020BDA.Device1,USB\VID_13D3&PID_3203
+
+
+[DestinationDirs]
+UDST7020BDA.CopyDrivers	= 10,System32\Drivers 
+
+
+[SourceDisksNames]
+1 = %INSTALLATION_DISK%, UDST7020Bda.inf, ,
+
+[SourceDisksNames.AMD64]
+1 = %INSTALLATION_DISK%, UDST7020Bda.inf, , \AMD64
+
+[SourceDisksNames.IA64]
+1 = %INSTALLATION_DISK%, UDST7020Bda.inf, , \IAD64
+
+[SourceDisksFiles]
+UDST7020Bda.sys = 1
+
+
+[ControlFlags]
+ExcludeFromSelect	= *
+ExcludeFromSelect.NT	= *
+
+
+[UDST7020BDA.Device.NT]
+Include    = ks.inf, kscaptur.inf, bda.inf
+Needs      = KS.Registration.NT, KSCAPTUR.Registration.NT, BDA.Installation.NT
+AddReg     = UDST7020BDA.AddReg
+CopyFiles  = UDST7020BDA.CopyDrivers
+
+
+[UDST7020BDA.Device.NT.Services]
+Addservice = UDST7020BDA, 0x00000002, UDST7020BDA.AddService
+
+[UDST7020BDA.Device1.NT]
+Include    = ks.inf, kscaptur.inf, bda.inf
+Needs      = KS.Registration.NT, KSCAPTUR.Registration.NT, BDA.Installation.NT
+AddReg     = UDST7020BDA.AddReg1
+CopyFiles  = UDST7020BDA.CopyDrivers
+
+
+[UDST7020BDA.Device1.NT.Services]
+Addservice = UDST7020BDA, 0x00000002, UDST7020BDA.AddService
+
+[UDST7020BDA.AddService]
+DisplayName    = %UDST7020BDA.FriendlyName%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\UDST7020Bda.sys
+LoadOrderGroup = Base
+
+[UDST7020BDA.CopyDrivers]
+UDST7020Bda.sys
+
+
+[UDST7020BDA.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,UDST7020Bda.sys
+HKR,,PageOutWhenUnopened,3,01
+
+;Disabe HID driver install
+HKR,"ENUM\Device1",pnpid,,"UDST7021HID.VIRTUAL"
+
+HKLM,System\CurrentControlSet\Control\MediaCategories\{FF7451BA-42F1-4a9e-9908-E12406A48D6D}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{FF7451BA-42F1-4a9e-9908-E12406A48D6D},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{FF7451BA-42F1-4a9e-9908-E12406A48D6D},Name,,"Tuner Node"
+HKLM,System\CurrentControlSet\Control\MediaCategories\{7969986E-A637-4e4e-8AC8-0BD9A02DFC1F}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{7969986E-A637-4e4e-8AC8-0BD9A02DFC1F},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{7969986E-A637-4e4e-8AC8-0BD9A02DFC1F},Name,,"Demodulator Node"
+HKLM,System\CurrentControlSet\Control\MediaCategories\{54B37042-5CED-48dd-BF4B-16FF7D6E8C81}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{54B37042-5CED-48dd-BF4B-16FF7D6E8C81},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{54B37042-5CED-48dd-BF4B-16FF7D6E8C81},Name,,"Antenna In Pin"
+
+HKLM,System\CurrentControlSet\Control\MediaCategories\{2700E515-7868-4e6f-A57E-0D55A850EC7D}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{2700E515-7868-4e6f-A57E-0D55A850EC7D},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{2700E515-7868-4e6f-A57E-0D55A850EC7D},Name,,"Tuner Node"
+HKLM,System\CurrentControlSet\Control\MediaCategories\{142DC0CE-6F84-451f-B359-EF15BBA30088}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{142DC0CE-6F84-451f-B359-EF15BBA30088},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{142DC0CE-6F84-451f-B359-EF15BBA30088},Name,,"Demodulator Node"
+HKLM,System\CurrentControlSet\Control\MediaCategories\{CA00E3F6-190E-40c0-BD9E-69CB46145A39}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{CA00E3F6-190E-40c0-BD9E-69CB46145A39},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{CA00E3F6-190E-40c0-BD9E-69CB46145A39},Name,,"Antenna In Pin"
+
+HKLM,System\CurrentControlSet\Control\MediaCategories\{C7037B65-78D8-4966-BDA0-704A43B37A67}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{C7037B65-78D8-4966-BDA0-704A43B37A67},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{C7037B65-78D8-4966-BDA0-704A43B37A67},Name,,"Tuner Node"
+HKLM,System\CurrentControlSet\Control\MediaCategories\{0FDBFE87-05CA-4778-ABE5-EE5E75E7EA5E}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{0FDBFE87-05CA-4778-ABE5-EE5E75E7EA5E},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{0FDBFE87-05CA-4778-ABE5-EE5E75E7EA5E},Name,,"Demodulator Node"
+HKLM,System\CurrentControlSet\Control\MediaCategories\{D7C789A8-11B9-45a8-AF1C-67791C440080}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{D7C789A8-11B9-45a8-AF1C-67791C440080},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{D7C789A8-11B9-45a8-AF1C-67791C440080},Name,,"Antenna In Pin"
+
+HKLM,System\CurrentControlSet\Control\MediaCategories\{47F038EA-7D1E-4192-999B-3EFFFDAC7559}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{47F038EA-7D1E-4192-999B-3EFFFDAC7559},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{47F038EA-7D1E-4192-999B-3EFFFDAC7559},Name,,"Tuner Node"
+HKLM,System\CurrentControlSet\Control\MediaCategories\{1A78AA67-5A12-4119-941A-5D04A84CAEFB}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{1A78AA67-5A12-4119-941A-5D04A84CAEFB},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{1A78AA67-5A12-4119-941A-5D04A84CAEFB},Name,,"Demodulator Node"
+HKLM,System\CurrentControlSet\Control\MediaCategories\{C42A0C30-7D96-4ecf-81D3-AA26553E4B2A}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{C42A0C30-7D96-4ecf-81D3-AA26553E4B2A},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{C42A0C30-7D96-4ecf-81D3-AA26553E4B2A},Name,,"Antenna In Pin"
+
+; LNBLOFLowBand = 9750  MHz
+HKR,"DriverData","LNBLOFLowBand",0x00010001, 0x16,0x26,0x00,0x00
+; LNBLOFHighBand = 10600 MHz
+HKR,"DriverData","LNBLOFHighBand",0x00010001, 0x68,0x29,0x00,0x00
+; LNBLOF Low/High band switch, 11700 MHz
+HKR,"DriverData","LNBLOFHiLoSwitch",0x00010001, 0xb4,0x2d,0x00,0x00
+
+
+; DiSEqC Selection
+; 0: Normal
+HKR,"DriverData","DiSEqC",0x00010001, 0x00,0x00,0x00,0x00
+; 1: DiSEqC A
+;HKR,"DriverData","DiSEqC",0x00010001, 0x01,0x00,0x00,0x00
+; 2: DiSEqC B
+;HKR,"DriverData","DiSEqC",0x00010001, 0x02,0x00,0x00,0x00
+; 3: DiSEqC C
+;HKR,"DriverData","DiSEqC",0x00010001, 0x03,0x00,0x00,0x00
+; 4: DiSEqC D
+;HKR,"DriverData","DiSEqC",0x00010001, 0x04,0x00,0x00,0x00
+
+; LNB Power
+; 0: OFF
+;HKR,"DriverData","LNBPower",0x00010001, 0x00,0x00,0x00,0x00
+; 1: ON
+HKR,"DriverData","LNBPower",0x00010001, 0x01,0x00,0x00,0x00
+
+; 22k Tone
+; 0: ON/OFF by LNB switch frequency
+;HKR,"DriverData","Tone",0x00010001, 0x00,0x00,0x00,0x00
+; 1: OFF
+HKR,"DriverData","Tone",0x00010001, 0x01,0x00,0x00,0x00
+; 2: ON
+;HKR,"DriverData","Tone",0x00010001, 0x02,0x00,0x00,0x00
+
+; Tone and Data Burst
+; 0: Tone and data burst off
+HKR,"DriverData","ToneDataBurst",0x00010001, 0x00,0x00,0x00,0x00
+; 1: Tone burst on
+;HKR,"DriverData","ToneDataBurst",0x00010001, 0x01,0x00,0x00,0x00
+; 2: Data burst on
+;HKR,"DriverData","ToneDataBurst",0x00010001, 0x02,0x00,0x00,0x00
+
+; IR system code checklist1
+; 00 00 00 00 : Enable all
+; FF FF 00 00 : Filter All
+HKR,"DriverData","IRSYSCODECHECK1",0x00010001, 0xFF,0x00,0x00,0x00
+
+; //Mapping RC table for DTV-DVB
+HKR,"DriverData","RC_Configuration",0x00010001, 0x00,0x00,0x00,0x00
+; //Mapping RC table for Cyberlink
+;HKR,"DriverData","RC_Configuration",0x00010001, 0x01,0x00,0x00,0x00
+; //Mapping RC table for IVI
+;HKR,"DriverData","RC_Configuration",0x00010001, 0x02,0x00,0x00,0x00
+; //Mapping RC table for MCE
+;HKR,"DriverData","RC_Configuration",0x00010001, 0x03,0x00,0x00,0x00
+; //Mapping RC table for NEW TH HID RC
+;HKR,"DriverData","RC_Configuration",0x00010001, 0x04,0x00,0x00,0x00
+; //Mapping RC table for Custom
+;HKR,"DriverData","RC_Configuration",0x00010001, 0x05,0x00,0x00,0x00
+; //Mapping RC table for DNTVLive HID RC
+;HKR,"DriverData","RC_Configuration",0x00010001, 0x10,0x00,0x00,0x00
+; //Disable RC
+;HKR,"DriverData","RC_Configuration",0x00010001, 0xFF,0xFF,0x00,0x00
+
+; TSGenSimulator
+; 0:Disabled, 1:DVB-S, 2:DVB-T, 4:DVB-C, 8:ATSC 16:MCE DVB-T
+HKR,"DriverData","TSGenSimulator",0x00010001, 0x01,0x00,0x00,0x00
+
+; SupportHWInfo (MAX 32 bytes)
+HKR,"DriverData","SupportHWInfo",0x00010000, "702X DVB-S TVBox"
+
+; Device_Name (MAX 32 bytes)
+;HKR,"DriverData","Device_Name",0x00010000, "7021A USB-Sat"
+
+[UDST7020BDA.AddReg1]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,UDST7020Bda.sys
+HKR,,PageOutWhenUnopened,3,01
+HKLM,System\CurrentControlSet\Control\MediaCategories\{FF7451BA-42F1-4a9e-9908-E12406A48D6D}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{FF7451BA-42F1-4a9e-9908-E12406A48D6D},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{FF7451BA-42F1-4a9e-9908-E12406A48D6D},Name,,"Tuner Node"
+HKLM,System\CurrentControlSet\Control\MediaCategories\{7969986E-A637-4e4e-8AC8-0BD9A02DFC1F}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{7969986E-A637-4e4e-8AC8-0BD9A02DFC1F},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{7969986E-A637-4e4e-8AC8-0BD9A02DFC1F},Name,,"Demodulator Node"
+HKLM,System\CurrentControlSet\Control\MediaCategories\{54B37042-5CED-48dd-BF4B-16FF7D6E8C81}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{54B37042-5CED-48dd-BF4B-16FF7D6E8C81},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{54B37042-5CED-48dd-BF4B-16FF7D6E8C81},Name,,"Antenna In Pin"
+
+HKLM,System\CurrentControlSet\Control\MediaCategories\{2700E515-7868-4e6f-A57E-0D55A850EC7D}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{2700E515-7868-4e6f-A57E-0D55A850EC7D},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{2700E515-7868-4e6f-A57E-0D55A850EC7D},Name,,"Tuner Node"
+HKLM,System\CurrentControlSet\Control\MediaCategories\{142DC0CE-6F84-451f-B359-EF15BBA30088}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{142DC0CE-6F84-451f-B359-EF15BBA30088},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{142DC0CE-6F84-451f-B359-EF15BBA30088},Name,,"Demodulator Node"
+HKLM,System\CurrentControlSet\Control\MediaCategories\{CA00E3F6-190E-40c0-BD9E-69CB46145A39}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{CA00E3F6-190E-40c0-BD9E-69CB46145A39},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{CA00E3F6-190E-40c0-BD9E-69CB46145A39},Name,,"Antenna In Pin"
+
+HKLM,System\CurrentControlSet\Control\MediaCategories\{C7037B65-78D8-4966-BDA0-704A43B37A67}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{C7037B65-78D8-4966-BDA0-704A43B37A67},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{C7037B65-78D8-4966-BDA0-704A43B37A67},Name,,"Tuner Node"
+HKLM,System\CurrentControlSet\Control\MediaCategories\{0FDBFE87-05CA-4778-ABE5-EE5E75E7EA5E}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{0FDBFE87-05CA-4778-ABE5-EE5E75E7EA5E},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{0FDBFE87-05CA-4778-ABE5-EE5E75E7EA5E},Name,,"Demodulator Node"
+HKLM,System\CurrentControlSet\Control\MediaCategories\{D7C789A8-11B9-45a8-AF1C-67791C440080}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{D7C789A8-11B9-45a8-AF1C-67791C440080},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{D7C789A8-11B9-45a8-AF1C-67791C440080},Name,,"Antenna In Pin"
+
+HKLM,System\CurrentControlSet\Control\MediaCategories\{47F038EA-7D1E-4192-999B-3EFFFDAC7559}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{47F038EA-7D1E-4192-999B-3EFFFDAC7559},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{47F038EA-7D1E-4192-999B-3EFFFDAC7559},Name,,"Tuner Node"
+HKLM,System\CurrentControlSet\Control\MediaCategories\{1A78AA67-5A12-4119-941A-5D04A84CAEFB}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{1A78AA67-5A12-4119-941A-5D04A84CAEFB},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{1A78AA67-5A12-4119-941A-5D04A84CAEFB},Name,,"Demodulator Node"
+HKLM,System\CurrentControlSet\Control\MediaCategories\{C42A0C30-7D96-4ecf-81D3-AA26553E4B2A}
+HKLM,System\CurrentControlSet\Control\MediaCategories\{C42A0C30-7D96-4ecf-81D3-AA26553E4B2A},Display,0x00010001,0
+HKLM,System\CurrentControlSet\Control\MediaCategories\{C42A0C30-7D96-4ecf-81D3-AA26553E4B2A},Name,,"Antenna In Pin"
+
+
+; LNBLOFLowBand = 9750  MHz
+HKR,"DriverData","LNBLOFLowBand",0x00010001, 0x16,0x26,0x00,0x00
+; LNBLOFHighBand = 10600 MHz
+HKR,"DriverData","LNBLOFHighBand",0x00010001, 0x68,0x29,0x00,0x00
+; LNBLOF Low/High band switch, 11700 MHz
+HKR,"DriverData","LNBLOFHiLoSwitch",0x00010001, 0xb4,0x2d,0x00,0x00
+
+
+; DiSEqC Selection
+; 0: Normal
+HKR,"DriverData","DiSEqC",0x00010001, 0x00,0x00,0x00,0x00
+; 1: DiSEqC A
+;HKR,"DriverData","DiSEqC",0x00010001, 0x01,0x00,0x00,0x00
+; 2: DiSEqC B
+;HKR,"DriverData","DiSEqC",0x00010001, 0x02,0x00,0x00,0x00
+; 3: DiSEqC C
+;HKR,"DriverData","DiSEqC",0x00010001, 0x03,0x00,0x00,0x00
+; 4: DiSEqC D
+;HKR,"DriverData","DiSEqC",0x00010001, 0x04,0x00,0x00,0x00
+
+; LNB Power
+; 0: OFF
+;HKR,"DriverData","LNBPower",0x00010001, 0x00,0x00,0x00,0x00
+; 1: ON
+HKR,"DriverData","LNBPower",0x00010001, 0x01,0x00,0x00,0x00
+
+; 22k Tone
+; 0: ON/OFF by LNB switch frequency
+HKR,"DriverData","Tone",0x00010001, 0x00,0x00,0x00,0x00
+; 1: OFF
+;HKR,"DriverData","Tone",0x00010001, 0x01,0x00,0x00,0x00
+; 2: ON
+;HKR,"DriverData","Tone",0x00010001, 0x02,0x00,0x00,0x00
+
+; Tone and Data Burst
+; 0: Tone and data burst off
+HKR,"DriverData","ToneDataBurst",0x00010001, 0x00,0x00,0x00,0x00
+; 1: Tone burst on
+;HKR,"DriverData","ToneDataBurst",0x00010001, 0x01,0x00,0x00,0x00
+; 2: Data burst on
+;HKR,"DriverData","ToneDataBurst",0x00010001, 0x02,0x00,0x00,0x00
+
+; TSGenSimulator
+; 0:Disabled, 1:DVB-S, 2:DVB-T, 4:DVB-C, 8:ATSC 16: MCE DVB-T
+HKR,"DriverData","TSGenSimulator",0x00010001, 0x01,0x00,0x00,0x00
+
+; SupportHWInfo (MAX 32 bytes)
+HKR,"DriverData","SupportHWInfo",0x00010000, "702X DVB-S TVBox"
+
+; Device_Name (MAX 32 bytes)
+;HKR,"DriverData","Device_Name",0x00010000, "7021A USB-Sat"
+
+[UDST7020BDA.Device.NT.Interfaces]
+AddInterface	= %KSCATEGORY_BDATUNER%,	%KSSTRING_BdaFilter%, UDST7020BDA.Interfaces,
+AddInterface	= %KSCATEGORY_BDARECEIVER%,	%KSSTRING_BdaFilter%, UDST7020BDA.Interfaces,
+AddInterface	= %KSCATEGORY_BDATUNER%,	%KSSTRING_VBdaFilter%, UDST7020BDA.VInterfaces,
+AddInterface	= %KSCATEGORY_BDARECEIVER%,	%KSSTRING_VBdaFilter%, UDST7020BDA.VInterfaces,
+AddInterface	= %KSCATEGORY_BDATUNER%,	%KSSTRING_MBdaFilter%, UDST7020BDA.MInterfaces,
+AddInterface	= %KSCATEGORY_BDARECEIVER%,	%KSSTRING_MBdaFilter%, UDST7020BDA.MInterfaces,
+AddInterface	= %KSCATEGORY_BDATUNER%,	%KSSTRING_ABdaFilter%, UDST7020BDA.AInterfaces,
+AddInterface	= %KSCATEGORY_BDARECEIVER%,	%KSSTRING_ABdaFilter%, UDST7020BDA.AInterfaces,
+
+
+[UDST7020BDA.Device1.NT.Interfaces]
+AddInterface	= %KSCATEGORY_BDATUNER%,	%KSSTRING_BdaFilter%, UDST7020BDA.Interfaces,
+AddInterface	= %KSCATEGORY_BDARECEIVER%,	%KSSTRING_BdaFilter%, UDST7020BDA.Interfaces,
+AddInterface	= %KSCATEGORY_BDATUNER%,	%KSSTRING_VBdaFilter%, UDST7020BDA.VInterfaces,
+AddInterface	= %KSCATEGORY_BDARECEIVER%,	%KSSTRING_VBdaFilter%, UDST7020BDA.VInterfaces,
+AddInterface	= %KSCATEGORY_BDATUNER%,	%KSSTRING_MBdaFilter%, UDST7020BDA.MInterfaces,
+AddInterface	= %KSCATEGORY_BDARECEIVER%,	%KSSTRING_MBdaFilter%, UDST7020BDA.MInterfaces,
+AddInterface	= %KSCATEGORY_BDATUNER%,	%KSSTRING_ABdaFilter%, UDST7020BDA.AInterfaces,
+AddInterface	= %KSCATEGORY_BDARECEIVER%,	%KSSTRING_ABdaFilter%, UDST7020BDA.AInterfaces,
+
+
+
+[UDST7020BDA.Interfaces]
+AddReg	= UDST7020BDA.Interface.AddReg
+
+[UDST7020BDA.VInterfaces]
+AddReg	= UDST7020BDA.VInterface.AddReg
+
+[UDST7020BDA.MInterfaces]
+AddReg	= UDST7020BDA.MInterface.AddReg
+
+[UDST7020BDA.AInterfaces]
+AddReg	= UDST7020BDA.AInterface.AddReg
+
+
+[UDST7020BDA.Interface.AddReg]
+HKR,,CLSID,,%UDST7020BDA.CLSID%
+HKR,,FriendlyName,,%UDST7020BDA.FriendlyName%
+
+[UDST7020BDA.VInterface.AddReg]
+HKR,,CLSID,,%UDST7020BDA.CLSID%
+HKR,,FriendlyName,,%UDST7020BDA.VFriendlyName%
+
+[UDST7020BDA.MInterface.AddReg]
+HKR,,CLSID,,%UDST7020BDA.CLSID%
+HKR,,FriendlyName,,%UDST7020BDA.MFriendlyName%
+
+[UDST7020BDA.AInterface.AddReg]
+HKR,,CLSID,,%UDST7020BDA.CLSID%
+HKR,,FriendlyName,,%UDST7020BDA.AFriendlyName%
+
+
+
+[Strings]
+DTV-DVB				= "DTV-DVB"
+MfgName				= "DTV-DVB"
+UDST7020BDA.CLSID		= "{17CCA71B-ECD7-11D0-B908-00A0C9223196}"  ; KsProxy.ax's ID, REQUIRED
+UDST7020BDA.DeviceDesc		= "DTV-DVB UDST7020BDA DVB-S USB Box"
+UDST7020BDA.DeviceDesc1		= "DTV-DVB UDST7020BDA DVB-S USB Box(Without HID)"
+UDST7020BDA.FriendlyName	= "DTV-DVB UDST7020BDA DVB-S Receiver"
+UDST7020BDA.VFriendlyName	= "DTV-DVB UDST7020BDA DVB-T VReceiver"
+UDST7020BDA.MFriendlyName	= "DTV-DVB UDST7020BDA MCE MReceiver"
+UDST7020BDA.AFriendlyName	= "DTV-DVB UDST7020BDA ATSC AReceiver"
+INSTALLATION_DISK 		= "DTV-DVB UDST7020Bda Installation Disk"
+KSSTRING_BdaFilter		= "{2BC59444-39D8-49cb-ADD5-AB91AA7247AE}"
+KSSTRING_VBdaFilter             = "{A0F9219E-7C58-4a1d-B8E7-7325F0BC4501}"
+KSSTRING_MBdaFilter             = "{461B07F9-02A9-48eb-A412-1D6AADC9BD6F}"
+KSSTRING_ABdaFilter             = "{D98F682B-189F-43e1-9F68-D49453370DB6}"
+
+;
+; The following items should be moved to KS_registration - TCP
+;
+KSCATEGORY_BDATUNER     = "{71985F48-1CA1-11d3-9CC8-00C04F7971E0}"
+KSCATEGORY_BDARECEIVER	= "{FD0A5AF4-B41D-11d2-9C95-00C04F7971E0}"	
+MediaCategories         = "SYSTEM\CurrentControlSet\Control\MediaCategories"
+    
+
+;
+; ServiceType values
+SERVICE_KERNEL_DRIVER				= 0x00000001
+SERVICE_FILE_SYSTEM_DRIVER			= 0x00000002
+SERVICE_ADAPTER					= 0x00000004
+SERVICE_RECOGNIZER_DRIVER			= 0x00000008
+SERVICE_WIN32_OWN_PROCESS			= 0x00000010
+SERVICE_WIN32_SHARE_PROCESS			= 0x00000020
+SERVICE_INTERACTIVE_PROCESS			= 0x00000100
+SERVICE_INTERACTIVE_SHARE_PROCESS	        = 0x00000120
+
+; StartType values
+SERVICE_BOOT_START          = 0x00000000
+SERVICE_SYSTEM_START        = 0x00000001
+SERVICE_AUTO_START          = 0x00000002
+SERVICE_DEMAND_START        = 0x00000003
+SERVICE_DISABLED            = 0x00000004
+
+; ErrorControl values
+SERVICE_ERROR_IGNORE        = 0x00000000
+SERVICE_ERROR_NORMAL        = 0x00000001
+SERVICE_ERROR_SEVERE        = 0x00000002
+SERVICE_ERROR_CRITICAL      = 0x00000003
+
+; Characteristic flags
+NCF_VIRTUAL                 = 0x0001
+NCF_WRAPPER                 = 0x0002
+NCF_PHYSICAL                = 0x0004
+NCF_HIDDEN                  = 0x0008
+NCF_NO_SERVICE              = 0x0010
+NCF_NOT_USER_REMOVABLE      = 0x0020
+NCF_HAS_UI                  = 0x0080
+NCF_MODEM                   = 0x0100
+
+; Registry types
+REG_MULTI_SZ                = 0x10000
+REG_EXPAND_SZ               = 0x20000
+REG_DWORD                   = 0x10001
+
+; Win9x Compatible Types
+REG_BINARY                  = 17
+REG_SZ                      = 0
+
+; Service install flags
+SPSVCINST_TAGTOFRONT        = 0x1
+SPSVCINST_ASSOCSERVICE      = 0x2

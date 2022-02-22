@@ -1,0 +1,224 @@
+UT-100 CD v2.4, 20180416
+***********************************
+it950x_linux_v18.04.16.1
+...
+
+
+UT-100 CD v2.4, 20170419
+***********************************
+1.it950x_linux_v16.11.10.1
+2. BDAViewer+ v2500
+
+
+UT-100 CD v2.4, 20161003
+***********************************
+1.it950x_linux_v16.09.30.1
+2.If you fail to install the driver in Windows7 SP1, Please install Microsoft Security Update KB3033929
+KB3033929 download link:
+32 bit OS Win7
+https://www.microsoft.com/en-us/download/details.aspx?id=46078
+
+64 bit OS Win7
+https://www.microsoft.com/en-us/download/details.aspx?id=46148
+
+
+
+UT-100 CD v2.4, 20160819
+***********************************
+1.BDAViewer update to V2_4_9_2
+
+
+UT-100 CD v2.4, 20160712
+***********************************
+1.BDAViewer update to V2_4_9_1
+  (Decoding UART mux'ed NMEA GPS info)
+
+
+UT-100 CD v2.4, 20160520
+***********************************
+1.BDAViewer update to V2_4_7_0
+
+
+UT-100 CD v2.4, 20160408
+***********************************
+1.TSPlayer v1037- fix 
+*) Resume playing after loading a new TS file in XML.
+*) Add key down event handler in frequency textbox.
+2. Windows SDK sample testkit update
+
+
+UT-100 CD v2.4, 20160317
+***********************************
+1.TSPlayer v1037- fix wrong bit rate calculation
+
+UT-100 CD v2.4, 20160304
+***********************************
+1.BDAViewer update to V2_4_4_0
+2.TSPlayer 1037
+3.Linux it950x_linux_v15.11.30.1
+
+UT-100 CD v2.4, 20151207
+***********************************
+1.BDAViewer update to V2_4_0_0
+
+UT-100 CD v2.4, 20151130
+***********************************
+1.Windows Driver update to v15.11.27.1
+2.TSPlayer 1.0.3.6
+
+
+UT-100 CD v2.4, 20151110
+***********************************
+1. BDAviewer+ update to v2390
+2. Linux driver update to it950x_linux_v15.11.06.1
+3. TSPlayer 1.0.3.5
+
+
+UT-100 CD v2.4, 20150826
+***********************************
+1. BDAviewer+ update to v2380-new
+2. Windows Driver update to 15.8.21.1
+3. TSPlayer 1.0.3.4
+
+
+UT-100 CD v2.4, 20150703
+***********************************
+1. BDAviewer+ update to v2380
+
+UT-100 CD v2.4, 20150522
+***********************************
+1. BDAviewer+ update to v2370
+
+
+UT-100 CD v2.4, 20150222
+***********************************
+1. IQ Table for new UT-100 dongle
+
+UT-100 CD v2.4, 20150114
+***********************************
+1. BDAViewer update
+2. TSPlayer update
+
+UT-100 CD v2.4, 20141206
+***********************************
+1. BDAViewer update for endeavour filter
+
+
+UT-100 CD v2.4, 20141113
+***********************************
+1. Tsplayer test mode for sine tone output
+
+
+UT-100 CD v2.4, 20140926
+***********************************
+1. PC2TV & Tsplayer PAT version code
+
+
+UT-100 CD v2.4, 20140915
+***********************************
+1. Tsplayer Wrong enumeration order for 9507 and 9517 
+
+UT-100 CD v2.4, 20140828
+***********************************
+1. TSPlayer update for streaming server support
+
+UT-100 CD v2.4, 20140819
+***********************************
+1. Provide Windows driver Installer
+2. Update QIG
+3. TSPlayer (fix attenuator/gain setting not saved)
+
+UT-100 CD v2.4, 20140813
+***********************************
+1. Update Windows driver for packet alignment
+
+UT-100 CD v2.4, 20140729
+***********************************
+1. Update Linux SDK to it950x_linux_v14.06.06.1
+
+UT-100 CD v2.4, 20140715
+***********************************
+1. TSPlayer update (xp failure fix)
+2. PC2TV update to 1333 (1 MHz BW Tx support)
+3. BDAViewer UPDATE
+4. Single CAT file for driver
+
+UT-100 CD v2.3, 20140626
+***********************************
+1. TSPlayer update (TSPlayerControl)
+
+UT-100 CD v2.3, 20140620
+***********************************
+1. Update PC2TV for better compatibility with camera and capture devices
+2. Update IQ table for IQtable_UT100V04-v3.bin 1.2G band
+3. Spec update
+
+UT-100 CD v2.3, 20140522
+***********************************
+1. Rename IQ tables
+
+UT-100 CD v2.3, 20140514
+***********************************
+1. Windows Driver Update
+
+UT-100 CD v2.3, 20140506
+***********************************
+1.Update Linux SDK to it950x_linux_v13.12.17.1
+2. Include  Linux SDK it950x_linux_v13.09.13.1 for opencaster
+3. QIG (device name)
+
+UT-100 CD v2.3, 20140502
+***********************************
+1.Update Windows 32-bit driver cat file for Vista/WIN7/WIN8
+
+UT-100 CD v2.3, 20140128
+***********************************
+1.Update PC2TV.exe for better capture source sompatibility
+
+UT-100 CD v2.3, 20140117
+***********************************
+1.Fix PC2TV stopped but RF still on
+2. Change PC2TV default PTS LAG to 500ms
+
+UT-100 CD v2.3, 20140115
+***********************************
+v2.3 Revision:
+1. Linux driver update
+2. UT-100 spec update
+3. PC2TV run-stop-run failure bug fixed
+4. Fix PC2TV audio failure with mixer or mic-in
+5. DigitalTV 1.2G support
+6. Windows driver fix for crash failure with some USB 3.0 host.
+7. Update TSPlayer to 1020
+8. Update PC2TV user's guide for disabling UAC "Notify"
+**********************************************************************
+
+This brief document is for users who have installed UT-100 dongle previously 
+
+
+Note:
+All the applications can only work properly with the new driver, so don't run
+ new applications with old driver or old applications with new driver.
+
+
+
+How to Update,
+ 
+a. Windows driver
+Windows driver: you should goto control panel, device manager, select IT950x, 
+click right button, and select "update driver",....
+ 
+b. TS player
+Just copy it to your hard disk, and replace the old one. No special install needed.
+ 
+c. PC2TV
+Copy it to your hard disk. When the first time use, please run "install.EXE".
+
+d. Media2TS
+Copy it to your hard disk. When the first time use, please run "install.EXE".
+
+e. BDAViewer
+Copy it to your hard disk. When the first time use, please run "install_filter.bat".
+
+f. DigitalTV
+Run Setup.exe to remove the old install, then run Setup again to install the new version.

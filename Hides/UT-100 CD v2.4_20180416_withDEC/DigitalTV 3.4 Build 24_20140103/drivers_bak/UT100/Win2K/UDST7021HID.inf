@@ -1,0 +1,115 @@
+;
+;   Installation inf file for DVB-T USB adapter HID driver
+;   Copyright 2005, DTV-DVB
+;
+
+[Version]
+Signature="$CHICAGO$"
+Class=HIDClass
+ClassGuid={745a17a0-74d3-11d0-b6fe-00a0c90f57da}
+Provider=%DTV-DVB%
+DriverVer=06/29/2006,1.0.1.3
+CatalogFile 	= UDST7021HID.cat
+CatalogFile.NTAMD64 = AMD64\UDST7021HID.cat
+CatalogFile.NTIA64  = IA64\UDST7021HID.cat
+
+[Manufacturer]
+%MfgName% = DTV-DVB, NTAMD64, NTIA64
+
+[DTV-DVB]
+%UDST7021HID.DeviceDesc%=UDST7021HID.Device,AVSTREAM\UDST7021HID.VIRTUAL
+
+[DTV-DVB.NTAMD64]
+%UDST7021HID.DeviceDesc%=UDST7021HID.Device,AVSTREAM\UDST7021HID.VIRTUAL
+
+[DTV-DVB.NTIA64]
+%UDST7021HID.DeviceDesc%=UDST7021HID.Device,AVSTREAM\UDST7021HID.VIRTUAL
+
+[DestinationDirs]
+UDST7021HID.CopyDrivers = 10,System32\Drivers 
+
+[SourceDisksNames]
+1 = %INSTALLATION_DISK%, UDST7021HID.inf, ,
+
+[SourceDisksNames.AMD64]
+1 = %INSTALLATION_DISK%, UDST7021HID.inf, , \AMD64
+
+[SourceDisksNames.IA64]
+1 = %INSTALLATION_DISK%, UDST7021HID.inf, , \IA64
+
+[SourceDisksFiles]
+UDST7021HID.sys = 1
+
+[ControlFlags]
+ExcludeFromSelect	= *
+ExcludeFromSelect.NT	= *
+
+[UDST7021HID.Device.NT]
+CopyFiles = UDST7021HID.CopyDrivers
+AddReg    = UDST7021HID.AddReg
+
+[UDST7021HID.Device.NT.Services]
+AddService = UDST7021HID,0x00000002,UDST7021HID.AddService
+
+[UDST7021HID.AddService]
+DisplayName     = %UDST7021HID.FriendlyName%
+ServiceType     = 1                  ; SERVICE_KERNEL_DRIVER
+StartType       = 3                  ; SERVICE_DEMAND_START
+ErrorControl    = 0                  ; SERVICE_ERROR_IGNORE
+ServiceBinary   = %10%\system32\drivers\UDST7021HID.sys
+LoadOrderGroup  = Extended Base
+
+[UDST7021HID.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,UDST7021HID.sys
+
+;Configurable RC Hot keys 
+; Scan code mappings.
+; Format: SCANCODE_nn = 0xii, 0xjj, 0xkk, 0xll
+;   nn: hex value of scan code (Please reference TwinHan RC table)
+;   ii: first virtual key value
+;   jj: ctrl virtual key value
+;   kk: shift virtual key value
+;   ll: alt virtual key value
+; Note: 1) Refer to MSDN for virtual key values (keyword: "VK_")
+;       2) Maximum three key combination supported now
+;
+;HKR,"DriverData","RC_Scancode_00",0x00010001, 0x00,0x00, 0x00, 0x00
+;HKR,"DriverData","RC_Scancode_01",0x00010001, 0x00,0x00, 0x00, 0x00
+;HKR,"DriverData","RC_Scancode_02",0x00010001, 0x00,0x00, 0x00, 0x00
+;HKR,"DriverData","RC_Scancode_03",0x00010001, 0x00,0x00, 0x00, 0x00
+;HKR,"DriverData","RC_Scancode_04",0x00010001, 0x00,0x00, 0x00, 0x00
+;HKR,"DriverData","RC_Scancode_05",0x00010001, 0x00,0x00, 0x00, 0x00
+;HKR,"DriverData","RC_Scancode_06",0x00010001, 0x00,0x00, 0x00, 0x00
+;HKR,"DriverData","RC_Scancode_07",0x00010001, 0x00,0x00, 0x00, 0x00
+;HKR,"DriverData","RC_Scancode_08",0x00010001, 0x00,0x00, 0x00, 0x00
+;HKR,"DriverData","RC_Scancode_09",0x00010001, 0x00,0x00, 0x00, 0x00
+;HKR,"DriverData","RC_Scancode_0A",0x00010001, 0x00,0x00, 0x00, 0x00
+;.....
+;.....
+;HKR,"DriverData","RC_Scancode_71",0x00010001, 0x00,0x00, 0x00, 0x00
+;HKR,"DriverData","RC_Scancode_72",0x00010001, 0x00,0x00, 0x00, 0x00
+;HKR,"DriverData","RC_Scancode_73",0x00010001, 0x00,0x00, 0x00, 0x00
+;HKR,"DriverData","RC_Scancode_74",0x00010001, 0x00,0x00, 0x00, 0x00
+;HKR,"DriverData","RC_Scancode_75",0x00010001, 0x00,0x00, 0x00, 0x00
+;HKR,"DriverData","RC_Scancode_76",0x00010001, 0x00,0x00, 0x00, 0x00
+;HKR,"DriverData","RC_Scancode_77",0x00010001, 0x00,0x00, 0x00, 0x00
+;HKR,"DriverData","RC_Scancode_78",0x00010001, 0x00,0x00, 0x00, 0x00
+;HKR,"DriverData","RC_Scancode_7A",0x00010001, 0x00,0x00, 0x00, 0x00
+;HKR,"DriverData","RC_Scancode_7B",0x00010001, 0x00,0x00, 0x00, 0x00
+;HKR,"DriverData","RC_Scancode_7C",0x00010001, 0x00,0x00, 0x00, 0x00
+;HKR,"DriverData","RC_Scancode_7D",0x00010001, 0x00,0x00, 0x00, 0x00
+;HKR,"DriverData","RC_Scancode_7E",0x00010001, 0x00,0x00, 0x00, 0x00
+;HKR,"DriverData","RC_Scancode_7F",0x00010001, 0x00,0x00, 0x00, 0x00
+
+
+[UDST7021HID.CopyDrivers]
+UDST7021HID.sys
+
+[Strings]
+DTV-DVB				= "DTV-DVB"
+MfgName				= "DTV-DVB"
+
+UDST7021HID.DeviceDesc		= "UDST7021HID - HID Device"
+UDST7021HID.FriendlyName	= "UDST7021HID - HID Driver"
+INSTALLATION_DISK		= "UDST7021HID - HID Installation Disk"

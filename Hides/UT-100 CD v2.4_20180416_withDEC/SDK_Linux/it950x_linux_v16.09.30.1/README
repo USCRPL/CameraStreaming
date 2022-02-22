@@ -1,0 +1,426 @@
+********************************************************************************************
+		ITEtech IT950x Linux Installation Guide for Linux PC
+				      2016/09/30
+		        Copyright (C) 2016 ITE Technologies, INC.
+********************************************************************************************
+
+1. Release information
+=========================
+
+	1) Target Platform
+		Linux PC
+	2) Release file
+		1. IT950x Driver Document
+			/it950x_driver
+		2. IT950x Tx Document
+			/it950x_testkit/it950x_testkit_tx
+		3. IT950x Rx Document
+			/it950x_testkit/it950x_testkit_rx
+		4. README file
+			/README
+
+2. IT950x Driver Information
+================================
+
+	1) Version
+	    This software package release.
+	    Driver component version information:
+		 DRIVER_RELEASE_VERSION  : v15.11.30.1
+		 EAGLE_FW_RELEASE_LINK_VERSION: 255.39.2.0
+		 EAGLE_FW_RELEASE_OFDM_VERSION: 255.9.11.0
+		 FW_RELEASE_LINK_VERSION: 0.0.255.1
+		 FW_RELEASE_OFDM_VERSION: 0.0.255.1
+		 FW_V2_RELEASE_LINK_VERSION: 3.40.1.0
+		 FW_V2_RELEASE_OFDM_VERSION: 3.32.1.0
+		 FW_V2I_RELEASE_LINK_VERSION: 3.46.6.3
+		 FW_V2I_RELEASE_OFDM_VERSION: 3.47.6.3
+		 API_TX_RELEASE_VERSION  : 103.20160929.0
+		 API_RX_RELEASE_VERSION  : 203.20130405.0
+
+	2) TX Setting:
+		1. URB_COUNT   16
+		2. URB_BUFSIZE 32712
+
+	3) RX Setting:
+		1. URB_COUNT   16
+		2. URB_BUFSIZE 65424
+
+	4) Change & Bugs fixed
+	-----------------------
+		v16.09.30.1
+	-----------------------
+		1. Update API to 1.3.20160929.0.
+		2. Add Set Spectral Inversion interface.
+
+	-----------------------
+		v15.11.30.1
+	-----------------------
+		1. Add copy_from_user for all ioctl to protect kernel space memory.
+
+	-----------------------
+		v15.11.06.1
+	-----------------------
+		1. Change RX handle name to "usb-it950x-rx"
+
+	-----------------------
+		v15.08.12.1
+	-----------------------
+		1. Add Send Data for one shot function in TX Testkit.
+
+	-----------------------
+		v15.01.28.1
+	-----------------------
+		1. Update API to 1.3.20150126.0.
+		2. Support Rx Decryption for OmegaII.
+
+	-----------------------
+		v14.06.06.1
+	-----------------------
+		1. Modified Ring buffer spin lock architecture.
+		2. Modeify GetDeviceType() API function.
+		3. Fix iq table free memory bug.
+		4. Fixed Tx testkit return behavior when write packet to buffer. 
+		5. Modify memory allocate read/write usb_control_bus.
+		6. Add urb control when length is zero.
+		7. Modify RX initial fail issue.
+		8. Modify Tx Rx minor range to 32:31 (The old version is setting to 16:47)
+
+	-----------------------
+		v13.12.17.1
+	-----------------------
+		1. Update API to 1.3.20131217.0.
+		   - I. Fixed output of range in getSignalQualityIndication interface 
+		   - II. The check error of TS interface type in User_Initialization.
+
+	-----------------------
+		v13.12.16.1
+	-----------------------
+		1. Add DC Calibration from EEPROM/AP of Setting.
+		2. Add Return Channel Support.
+		3. Modified Audio low bit rate(URB size: 188*2).
+		4. Update IT9503 Firmware and API to 1.3.20131120.0.
+
+	-----------------------
+		v13.10.15.1
+	-----------------------
+		1. Fixed handle name issue for open "Dynamic minors" setting with kernel config.
+		2. Modify mechanism of Set IQ table. (The method of parsing table had moved to driver level)
+		3. Modified I/O control struct types with 32 and 64-bit machines. 
+		   Instead "Dword" to "__u32" type and send variable address of parameter to kernel mode.
+		4. Rename I/O control of modulator from "IOCTL_ITE_DEMOD" to "IOCTL_ITE_MOD".
+		5. Fixed Rx initial failure issue.
+		6. Delete unsued API SDK struct and I/O control and modified SDK name.
+
+	-----------------------
+		v13.09.13.1
+	-----------------------
+		1. Modify IQtable issue.
+		2. Modify Mechanism of Device Type.
+
+	-----------------------
+		v13.09.02.1
+	-----------------------
+		1. Update API to 1.2.20130819.0.
+		2. Add RX I2C address detect from EEPROM.
+		3. Fix set and get device type issue.
+		4. Add IQtable malloc space in kernel space.
+		5. Add Chip Type for indentify 9503 or 9507.
+
+	-----------------------
+		v13.06.27.1
+	-----------------------
+		1. Update API to 1.2.20130606.0.
+		2. Add Set DC Calibration Value function for AP.
+
+	-----------------------
+		v13.05.03.1
+	-----------------------
+		1. Update API to 1.2.20130419.0.
+		2. Support BW to 2M, 3M, 4M.
+
+	-----------------------
+		v13.03.04.1
+	-----------------------
+		1. Fixed Tx Ring Buffer issue for 64-bit platform.
+		2. Update Rx Ring Buffer.
+		3. Update Linux SDK.
+		4. Update Tx Get Data BitRate issue.
+
+	-----------------------
+		v13.02.07.1
+	-----------------------
+		1. Update API to 1.2.20130204.0.
+		2. Update Linux SDK.
+		3. Modify Tx Ring buffer issues.
+
+	-----------------------
+		v13.01.31.1
+	-----------------------
+		1. Update SDK with IQ Calibration table and set device type.
+
+	-----------------------
+		v13.01.28.1
+	-----------------------
+		1. Update API to 1.2.20130124.0.
+		2. Modify RX and TX Power Saving mechanism for PC version. 
+                 It can change to DTVCAM or AVSender Power Saving mode.
+		3. Modify IQCalibration table loading mechanism to Testkit.
+
+	-----------------------
+		v12.11.02.1
+	-----------------------
+		1. Fixed Bit Rate control can not smooth issue for TX TestKit.
+		2. Add method to avoid RX or TX handle opened twice.
+
+	-----------------------
+		v12.10.02.1
+	-----------------------
+		2. Add IQ Table Loaded in TX Testkit initially. 
+
+	-----------------------
+		v12.09.18.1
+	-----------------------
+		1. Update Linux SDK.
+
+	-----------------------
+		v12.09.07.1
+	-----------------------
+		1. Fixed external IQ table issue.
+		2. Update Linux SDK to v1.02.
+		3. Sync RX API for driver.
+		4. Change all names to IT950x.
+		5. Change handle names to IT913x and IT950x.
+
+	-----------------------
+		v12.08.31.1
+	-----------------------
+		1. Update API to 2012/08/10.
+		2. IQ table with external file implementation.
+		3. Change all names to IT9507.
+		4. Linux SDK update.
+		5. Mutil-device supported.
+
+	-----------------------
+		v12.08.10.1
+	-----------------------
+		1. Fixed Driver Urb Number.
+
+	-----------------------
+		v12.07.11.1
+	-----------------------
+		1. Update API to 2012/07/09
+
+		2. Add Two TX Function.
+		   DTV_GetDeviceType();
+		   DTV_AdjustOutputGain();
+
+	-----------------------
+		v12.05.30.1
+	-----------------------
+		1. Get eeprom settings for stream type.
+
+
+3. Eagle muxer TestKit Information
+==================================
+	
+	1) Version
+
+	2) Change & Bugs fixed
+
+4. Build driver and testkit
+==================================
+
+	1) Make driver
+		1. IT950x_Driver/make
+		2. IT950x_Driver/make install
+   
+	2) Make testkit
+		1. for testkit tx
+   		   IT950x_Testkit/IT950x_Testkit_Tx/make
+		2. for testkit rx
+		   IT950x_Testkit/IT950x_Testkit_Rx/make
+
+5. Test Methods
+==================================
+
+	1)Tx_Test
+
+		1. Run testkit_it950x_tx Tool
+
+		# .IT950x_Testkit_Tx/it950x_testkit_tx 
+
+			================ Open default device handle ==================
+			= To chose another driver handle. Please input handle number =
+			= Example: ./testkit_it950x_tx 1 -> for usb-it950x1 handle ===
+			==============================================================
+			
+			Open /dev/usb-it950x0 ok
+			g_ITEAPI_TxDeviceInit ok
+			1 Devices
+			g_ITEAPI_GetDrvInfo ok
+			DeviceInfo.DriverVerion  = v16.09.30.1
+			DeviceInfo.APIVerion     = 1.3.20160929.0
+			DeviceInfo.FWVerionLink  = 255.39.2.0
+			DeviceInfo.FWVerionOFDM  = 255.9.11.0
+			DeviceInfo.Company       = ITEtech
+			DeviceInfo.SupportHWInfo = Eagle DVBT
+			DeviceInfo.ChipType      = IT9507
+
+			========= ITEtech Linux IT950x API TestKit =========
+			1. Set Modulation Transmission Parameters             
+			2. Get Device/Board Type                              
+			3. Set RF output Gain/Attenuation                     
+			4. Transmission Parameter Signalling Cell-id Setting  
+			5. Set IQ Calibration Table                           
+			6. Set DC Calibration Value                           
+			9. Output Test (Streaming a TS File)         
+			10.Test Send Data For One Shot
+			11.Set Set Spectral Inversion
+			0. Quit                                               
+			Enter Number: 
+
+		2. Select The Item -----------> 1. Set Modulator Parameters
+
+			========= ITEtech Linux IT950x API TestKit =========
+			1. Set Modulation Transmission Parameters             
+			2. Get Device/Board Type                              
+			3. Set RF output Gain/Attenuation                     
+			4. Transmission Parameter Signalling Cell-id Setting  
+			5. Set IQ Calibration Table                           
+			6. Set DC Calibration Value                           
+			9. Output Test (Streaming a TS File)                  
+			10.Test Send Data For One Shot
+			11.Set Set Spectral Inversion
+			0. Quit                                               
+			Enter Number: 1
+
+			=> Please Input Frequency in KHz (ex. 666000KHz): 666000
+
+			=> Please Input Bandwidth in KHz (ex. 2000-8000KHz): 8000
+			g_ITEAPI_TxSetChannel ok
+
+			=> Please Input constellation (0:QPSK  1:16QAM  2:64QAM): 2
+
+			=> Please Input Code Rate (0:1/2  1:2/3  2:3/4  3:5/6  4:7/8): 3
+
+			=> Please Input Interval (0:1/32  1:1/16  2:1/8  3:1/4): 3
+
+			=> Please Input Transmission Mode (0:2K  1:8K): 1
+
+			Frequency = 666000 KHz
+			Bandwidth = 8000 MHz
+			Constellation: 64QAM
+			Code Rate: 5/6
+			Interval: 1/4
+			Transmission Mode: 8K
+
+			****** g_ITEAPI_TxSetChannelModulation ok  ******
+
+			The Maximum Channel Capacity is 24882129 bps(24882 Kbps)
+
+
+			========= ITEtech Linux IT950x API TestKit =========
+			1. Set Modulation Transmission Parameters             
+			2. Get Device/Board Type                              
+			3. Set RF output Gain/Attenuation                     
+			4. Transmission Parameter Signalling Cell-id Setting  
+			5. Set IQ Calibration Table                           
+			6. Set DC Calibration Value                           
+			9. Output Test (Streaming a TS File)         
+			10.Test Send Data For One Shot  
+			11.Set Set Spectral Inversion       
+			0. Quit                                               
+			Enter Number: 
+
+
+		3. Select The Item -----------> 2. TX Data Output Test
+
+			========= ITEtech Linux IT950x API TestKit =========
+			1. Set Modulation Transmission Parameters             
+			2. Get Device/Board Type                              
+			3. Set RF output Gain/Attenuation                     
+			4. Transmission Parameter Signalling Cell-id Setting  
+			5. Set IQ Calibration Table                           
+			6. Set DC Calibration Value                           
+			9. Output Test (Streaming a TS File)          
+			10.Test Send Data For One Shot     
+			11.Set Set Spectral Inversion   
+			0. Quit                                               
+			Enter Number: 9
+			Input the TS file path name:  output.ts
+			output.ts size = 133857504
+			Insert Periodical Custom Packets for SI SDT Table (y/n) ?y
+
+			PAT TS ID:0x0020 and Service ID:0x0190 found
+			TS Sync byte found in offset:0
+			1'st PCR Offset:3948,PID:(0xfca),PCR:(0xfca-a55bf939)
+			min packet time=13.591549, max packet time=13.614035
+			Min Stream Data Rate=9942680 bps (9942 Kbps)
+			Max Stream Data Rate=9959129 bps (9959 Kbps)
+			Average Stream Data Rate=9952924 bps (9952 Kbps)
+			The recommended input file data rate for output.ts is = 9952 KBps
+			Enter Data Bit rate in Kbps(ex. 10000 for 10 Mbps):  9952
+			Repeat Loop: 1.Repeat, 2.Once:  1
+
+
+	2)Rx_Test
+
+		1. Run testkit_it950x_rx Tool
+
+				# .IT950x_Testkit_Tx/testkit_it950x_rx
+
+				Open /dev/usb-it950x-rx0 OK!
+
+				========== ITEtech Linux DTV Testkit ==========
+				DriverVerion  = v16.09.30.1
+				APIVerion     = 2.3.20130405.0
+				FWVerionLink  = 3.46.6.3
+				FWVerionOFDM  = 3.47.6.3
+				Company       = ITEtech
+				SupportHWInfo = OmegaII DVBT
+				===============================================
+
+				======= ITEtech Linux DTV Testkit =======
+
+				1. Lock Channel              
+				2. Singal Quality Statistics 
+				3. Record & Analyze Packets  
+				4. Mutil-Channel Lock Test   
+				5. Read/Write Register	   
+				6. Set TPS Decryption		   	
+				0 Quit                      
+				=> Please Input Your Choice: 
+
+
+		2. Select The Item -----------> 1. Lock Channel 
+
+			a. Input Frequency 575000 
+			b. Choose Bandwidth 6MHz 
+
+				======= ITEtech Linux DTV Testkit =======
+
+				1. Lock Channel              
+				2. Singal Quality Statistics 
+				3. Record & Analyze Packets  
+				4. Mutil-Channel Lock Test   
+				5. Read/Write Register	   
+				6. Set TPS Decryption		   	
+				0 Quit
+				=> Please Input Your Choice: 1
+
+				=> Please Input Frequency (KHz): 575000
+
+				=> Please Choose Bandwidth (0:8MHz  1:7MHz  2:6MHz): 2
+
+
+				**************** Lock Status ****************
+				Frequency = 575000 KHz
+				Bandwidth = 6 MHz
+
+				*** Channel Locked ***
+
+6. Device plug message
+==================================
+
+	Please refer SystemLog file     
+

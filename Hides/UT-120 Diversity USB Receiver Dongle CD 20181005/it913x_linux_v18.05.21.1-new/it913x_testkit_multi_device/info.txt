@@ -1,0 +1,54 @@
+<DeviceNum> 4
+<SettingTypeNum> 3
+*ChannelLock
+[1]
+<frequency> 671000
+<bandwidth> 6000
+[2]
+<frequency> 671000
+<bandwidth> 6000
+[3]
+<frequency> 671000
+<bandwidth> 6000
+[4]
+<frequency> 671000
+<bandwidth> 6000
+--------------------
+*MultiChannel
+[1]
+<startfreq> 533000
+<endfreq>   550000 
+<bandwidth> 6000
+[2]
+<startfreq> 551000
+<endfreq>   570000 
+<bandwidth> 6000
+[3]
+<startfreq> 533000
+<endfreq>   557000 
+<bandwidth> 6000
+[4]
+<startfreq> 509000
+<endfreq>   533000 
+<bandwidth> 6000
+--------------------
+*RWRegister
+[1]
+<0:Read, 1:Write> 1
+<0:LINK, 1:OFDM> 0
+<Address (Hex)> 0xdd8d
+<Write Value (Hex)> 0x1
+[2]
+<0:Read, 1:Write> 0
+<0:LINK, 1:OFDM> 0
+<Address (Hex)> 0xdd8d
+[3]
+<0:Read, 1:Write> 1
+<0:LINK, 1:OFDM> 0
+<Address (Hex)> 0xdd8d
+<Write Value (Hex)> 0x1
+[4]
+<0:Read, 1:Write> 0
+<0:LINK, 1:OFDM> 0
+<Address (Hex)> 0xdd8d
+

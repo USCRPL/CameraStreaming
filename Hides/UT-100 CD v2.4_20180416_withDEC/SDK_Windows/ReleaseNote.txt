@@ -1,0 +1,227 @@
+__________________________________________________________________
+
+        ITE API extension Software Package
+    Copyright (c) 2010-2013, ITE Technologies, Inc.
+__________________________________________________________________
+
+RELEASE v13.7.16.1
+
+Changes & bugs fixed:
+
+==========================
+DLL version: v13.7.16.1
+
+* Update DLL
+  - Fixing compatibility issue between (x86)ITEAPIEX.dll and (x64)Eagle driver for IQ table setting on TSplayer.  
+
+--------------------------------------------------------------------
+
+RELEASE v13.7.10.1
+
+Changes & bugs fixed:
+
+==========================
+DLL version: v13.7.10.1
+
+* Update DLL
+  - Fixing compatibility issue between (x86)ITEAPIEX.dll and (x64)Eagle driver for IQ table setting.  
+
+--------------------------------------------------------------------
+
+RELEASE v13.6.21.1
+
+Changes & bugs fixed:
+
+==========================
+DLL version: v13.6.21.1
+
+* add new menu item "Set DC Calibration Value" for control DC Calibration 
+
+--------------------------------------------------------------------
+
+RELEASE v13.2.5.1
+
+Changes & bugs fixed:
+
+==========================
+DLL version: v13.2.27.1
+
+* fix mutex initialization error for "ITE_init"
+
+--------------------------------------------------------------------
+
+RELEASE v13.2.5.1
+
+Changes & bugs fixed:
+
+==========================
+DLL version: v13.2.27.1
+
+* fix mutex initialization error for "ITE_init"
+
+--------------------------------------------------------------------
+
+RELEASE v13.2.5.1
+
+Changes & bugs fixed:
+
+==========================
+DLL version: v13.2.5.1
+
+* Fix "g_ITEAPI_TxGetGainRange" error
+* Fix "g_ITE_TxSetIQtable" error
+
+--------------------------------------------------------------------
+
+RELEASE v13.1.25.1
+
+Changes & bugs fixed:
+
+==========================
+Testkit v13.1.25.1 (DLL version: v13.1.24.1 )
+
+* Add new item "set IQtable"  
+
+--------------------------------------------------------------------
+
+RELEASE v12.12.21.1
+
+Changes & bugs fixed:
+
+
+==========================
+Testkit v12.12.21.1 (DLL version: v12.12.21.1 )
+
+* Change these three function names
+ITE_TxSendHwPSITable => ITE_TxSendCustomPacketOnce
+ITE_TxAccessFwPSITable => ITE_TxSetPeridicCustomPacket
+ITE_TxSetFwPSITableTimer => ITE_TxSetPeridicCustomPacketTimer
+
+*Update data rate calculation routine in testkit
+	1. Eagle Null packets is misrecognized as PCR packets
+	2. >2GB TS file file pointer is not moved correctly.
+*Sampe codes to support new API's in testkit
+
+--------------------------------------------------------------------
+
+RELEASE v12.12.12.1
+
+Changes & bugs fixed:
+
+==========================
+Eagle driver v12.12.12.1
+
+* Change the timing of power control for TsPlayer
+
+--------------------------------------------------------------------
+
+RELEASE v12.10.1.1
+
+Changes & bugs fixed:
+
+==========================
+Eagle driver v12.10.1.1
+
+* Remove power control of IT9507
+
+==========================
+Testkit v12.10.1.1 (DLL version: v12.10.1.1 )
+
+* Re-arrange menu items
+
+--------------------------------------------------------------------
+
+RELEASE v12.08.17.1
+
+Changes & bugs fixed:
+
+==========================
+Eagle driver v12.08.17.1
+
+* Update API
+* Enable function suspend for IT9507
+* Add driver interface "DEV_getOutputGain" for getting output gain
+* Add driver interface "DEV_getGainRange" for getting the Min/Max 
+  gain range of the specified frequency and bandwidth 
+* Add driver interface "DEV_setTPS" for setting TPS(Transmission Parameter Signalling)
+* Add driver interface "DEV_getTPS" for getting TPS(Transmission Parameter Signalling) settings  
+
+==========================
+Testkit v12.08.17.1 (DLL v12.08.17.1 source code & bin)
+
+* Add ITE_TxGetOutputGain.
+* Add ITE_TxGetGainRange.
+* Add ITE_TxSetTPS.
+* Add ITE_TxGetTPS.
+* Add ITE_TxGetNumOfDevice.
+* Add ITE_TxGetChipType.
+
+--------------------------------------------------------------------
+
+RELEASE V12.06.28.1
+
+Changes & bugs fixed:
+* Add ITE_TxGetDeviceType.
+
+--------------------------------------------------------------------
+
+RELEASE V12.06.26.1
+
+Changes & bugs fixed:
+* Modufy ITE_TxAdjustOutputGain.
+
+--------------------------------------------------------------------
+
+RELEASE V12.05.30.1
+
+Changes & bugs fixed:
+* ITEAPIEXTest_ISDB is used for IT9175 device
+  ITEAPIEXTest_RX is used for IT9135 device
+  ITEAPIEXTest_TX is used for IT9507 device
+* Add function comments in DLL source code.
+* Add TX_DataOutputTest function for playing back TS file with Control bit rate in ITEAPIEXTest_RX.
+
+--------------------------------------------------------------------
+
+RELEASE V12.02.09.1
+
+Changes & bugs fixed:
+* Support modulation parameters setting API for Eagle.
+
+--------------------------------------------------------------------
+
+RELEASE V11.12.01.1
+
+Changes & bugs fixed:
+* Support max device number to 64.
+
+--------------------------------------------------------------------
+
+RELEASE V11.03.14.1
+
+Changes & bugs fixed:
+* Fix AtUtil issue.
+
+--------------------------------------------------------------------
+
+RELEASE V11.03.01.1
+
+Changes & bugs fixed:
+* Add two chips support.
+
+--------------------------------------------------------------------
+
+RELEASE V10.7.30.1
+
+Changes & bugs fixed:
+* Fix ITE_init issue.
+
+--------------------------------------------------------------------
+
+RELEASE V10.7.26.1
+
+Changes & bugs fixed:
+* Integrate all dll extentions to one file (AF15BDAEX.dll, AFBDAEX.dll, AF9100EX.dll)
+  Backward compatible with AF15BDAEX.dll, AFBDAEX.dll and AF9100EX.dll by just change the name.
+
+--------------------------------------------------------------------

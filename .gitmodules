@@ -1,0 +1,3 @@
+[submodule "avc2ts"]
+	path = avc2ts
+	url = git://github.com/F5OEO/avc2ts

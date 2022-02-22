@@ -1,0 +1,44 @@
+*Failed to install (with IT9137+IT9133) Linux driver,
+
+
+Symptom:
+I installed IT9518 drivers before these steps. And following module is loaded:
+dvb_usb_af9035 36864 0
+dvb_usb_v2 36864 1 dvb_usb_af9035
+dvb_core 126976 1 dvb_usb_v2
+After"sudo make; sudo make install"the driver provided in"IT9137+IT9133 USB Diversity Receiver Dongle EVB/it913x_linux_v16.11.07.1/it913x_driver", then
+$ sudo ./it913x_testkit
+I got,
+Open /dev/usb-it913x0 fail
+And I notice that"dvb-usb-it913x"is not listed in the"lsmod", if I do 
+
+$ sudo make
+$ sudo insmod dvb-usb-it913x.ko
+then I got
+insmod: ERROR: could not insert module dvb-usb-it913x.ko: Unknown symbol in module
+Based on the README file, this was a bug fixed in"v16.07.25.1"but the driver version I have is"v16.11.07.1". But this may be cause I skip other steps in the"Makefile".
+Also, there is no /dev/usb-it913x0 after I plugged the board in.
+System Environment:
+Ubuntu 16.04.2 LTS, 64-bits
+Kernel: 4.6.0-040600-generic (downgraded from 4.8.0 to build the driver)
+
+
+Solution:
+A.
+dvb_usb_af9035 is a kernel module. 
+It¡¦s incompatible to the module dvb-usb-it913x.
+Please remove dvb_usb_af9035 and dvb_usb_v2 modules.
+And make sure the dvb-usb-it913x, dvb-usb, dvb-core and dvb-pll modules are loaded.
+
+B.
+Intallation Steps:
+1. install it913x drivers and then plug in the it913x board, you can see "dvb_usb_v2: 'ITE 9135 Generic' successfully initialized and connected".
+2. sudo rmmod dvb_usb_af9035
+3. sudo rmmod dvb_usb_v2
+4. unplug the it913x board and plug in again
+5. Now the it913x works and you can see "dvb-usb: ITEtech USB2.0 DVB-T Recevier successfully initialized and connected." in dmesg.
+5. Then install it9518 driver if you like
+
+* If use with it9518 on the same machine in the future, ALWAYS plug in it913x first then it9518
+
+
