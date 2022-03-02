@@ -1,3 +1,5 @@
-[submodule "avc2ts"]
-	path = avc2ts
-	url = git://github.com/F5OEO/avc2ts
+[submodule "FFmpeg"]
+	path = FFmpeg
+	url = https://github.com/FFmpeg/FFmpeg.git
+	shallow = true
+	branch = release/5.0
