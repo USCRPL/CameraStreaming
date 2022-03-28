@@ -1,0 +1,3 @@
+[submodule "rist-installer"]
+	path = rist-installer
+	url = git@github.com:tsduck/rist-installer.git
