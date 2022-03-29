@@ -1,3 +1,6 @@
 [submodule "rist-installer"]
 	path = rist-installer
 	url = git@github.com:tsduck/rist-installer.git
+[submodule "avc2ts"]
+	path = avc2ts
+	url = git@github.com:F5OEO/avc2ts.git
