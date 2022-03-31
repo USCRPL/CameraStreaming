@@ -21,6 +21,7 @@ cd ../..
 
 cd tsduck/
 sudo ./install-prerequisites.sh
+sudo apt install dkms libelf-dev
 cd buster
 sudo dpkg -i $(ls tsduck*) || { echo 'dpkg tsduck failed' ; exit 1; }
 sudo apt-get install -f -y || { echo 'apt-get install failed after tsduck installation' ; exit 1; }
