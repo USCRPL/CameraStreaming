@@ -13,18 +13,24 @@ TARGET_PORT=4000
 
 ##VIDEO SETTINGS##
 SERVICENAME="USC_RPL_DOMEPIERCER_LIVESTREAM "
-WIDTH=320
-HEIGHT=240
-FRAMERATE=15
-VIDEORATE=10000
+# WIDTH=1280
+# HEIGHT=720
+# FRAMERATE=25
+# VIDEORATE=3800000
+# TSRATE=4000000
+
+WIDTH=640
+HEIGHT=480
+FRAMERATE=25
+VIDEORATE=500000
 TSRATE=14000000
 
 ##TRANSMISSION SETTINGS##
-FREQUENCY=426000000  # in Hz
+FREQUENCY=916000000  # in Hz
 BANDWIDTH=8          # in MHz
 CONSTELLATION=64-QAM #Constellation type. Must be one of QPSK, 16-QAM, 64-QAM.
 GAIN=0
-#GAIN=-25			 #Adjust the output gain to the specified value in dB.
+#GAIN=-25            #Adjust the output gain to the specified value in dB.
 GUARDINTERVAL=1/32   #Guard interval. Must be one of 1/32, 1/16, 1/8, 1/4.
 HIGHPRIORITYFEC=2/3  #Error correction for high priority streams. Must be one of 1/2, 2/3, 3/4, 5/6, 7/8.
 
@@ -36,13 +42,13 @@ HIGHPRIORITYFEC=2/3  #Error correction for high priority streams. Must be one of
 ##transmission mode
 
 
-avc2ts -s $SERVICENAME \
+avc2ts -t 0 -s $SERVICENAME \
     -x $WIDTH -y $HEIGHT -f $FRAMERATE \
     -b $VIDEORATE -m $TSRATE \
-    -n $TARGET_IP:$TARGET_PORT 
+    -n $TARGET_IP:$TARGET_PORT &
 
 BGPID=$!
 
 tsp --realtime -d1 -I ip --local-address $TARGET_IP $TARGET_PORT \
-         -O hides -f $FREQUENCY  -b $BANDWIDTH -c $CONSTELLATION \
-	  --gain $GAIN -g $GUARDINTERVAL --high-priority-fec $HIGHPRIORITYFEC
+        -O hides -f $FREQUENCY # -b $BANDWIDTH -c $CONSTELLATION \
+    #   --gain $GAIN -g $GUARDINTERVAL --high-priority-fec $HIGHPRIORITYFEC
