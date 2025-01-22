@@ -4,3 +4,6 @@
 [submodule "avc2ts"]
 	path = avc2ts
 	url = git@github.com:F5OEO/avc2ts.git
+[submodule "avc2ts_Updated"]
+	path = avc2ts_Updated
+	url = https://github.com/Paulitician-of-USC/avc2ts_Updated.git
