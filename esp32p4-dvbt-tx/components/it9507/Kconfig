@@ -1,0 +1,16 @@
+menu "IT9507 DVB-T modulator"
+
+config IT9507_SKIP_FIRMWARE_UPLOAD
+    bool "Skip firmware upload on open"
+    default n
+    help
+        When enabled the driver will not upload the MCU firmware blob
+        when it9507_open() is called.
+
+        Note: the IT9507 is RAM-only; it loses its firmware whenever USB
+        power is removed. Only enable this if you are certain the device
+        was already initialised in the current power session and you do
+        not want to re-upload (e.g. you are restarting the ESP32 while
+        the USB stick remains powered and warm).
+
+endmenu

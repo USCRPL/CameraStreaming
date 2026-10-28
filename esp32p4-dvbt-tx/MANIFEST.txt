@@ -1,0 +1,29 @@
+esp32p4-dvbt-tx — file manifest (path : role)
+
+PROJECT ROOT
+  CMakeLists.txt                              : ESP-IDF top-level project file
+  sdkconfig.defaults                          : target (esp32p4), PSRAM, USB host, sensor
+  README.md                                   : overview, layout, build steps
+  MANIFEST.txt                                : this file
+
+main/                       (the application "main" component)
+  CMakeLists.txt                              : registers main srcs; REQUIRES it9507, esp_video, esp_h264
+  idf_component.yml                           : managed deps (esp_video, esp_cam_sensor, esp_h264)
+  app_main.c                                  : pipeline wiring (capture→overlay→encode→mux→modulate)
+  cam_capture.c / cam_capture.h               : OV5647 V4L2 capture (CSI→ISP→YUV420)
+  h264_encoder.c / h264_encoder.h             : HW H.264 via V4L2 M2M (/dev/video11)
+  overlay.c / overlay.h                       : callsign burn-in into the luma plane
+  overlay_font.h                              : generated 8x16 bitmap font (codes 0x20–0x5F)
+  ts_mux.c / ts_mux.h                         : CBR MPEG2-TS muxer (PAT/PMT/PES/PCR + null pad)
+  README.md                                   : pipeline + throughput/format notes
+
+components/it9507/          (reusable DVB-T modulator driver)
+  CMakeLists.txt                              : registers driver srcs; INCLUDE_DIRS + PRIV_INCLUDE_DIRS
+  idf_component.yml                           : component metadata (target esp32p4, idf>=5.3)
+  README.md                                   : wiring, firmware blob, build, caveats
+  include/it9507.h                            : PUBLIC API (install/set_modulation/start/write_ts/...)
+  include/it9507_regs.h                       : PUBLIC consts (VID/PID, endpoints, opcodes, enums)
+  priv_include/it9507_private.h               : INTERNAL device struct + cross-file prototypes
+  priv_include/it9507_firmware.h              : INTERNAL firmware blob holder (you supply the bytes)
+  src/it9507_core.c                           : command/checksum, registers, tuner math, modulation
+  src/it9507_usb.c                            : USB Host glue (enumerate, claim, cmd + TS transfers)

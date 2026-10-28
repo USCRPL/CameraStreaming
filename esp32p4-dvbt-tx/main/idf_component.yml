@@ -1,0 +1,8 @@
+# Managed component dependencies for the example "main" component.
+# Pin versions to whatever you validate against; the field names in
+# cam_capture.c's esp_video_init() track the esp_video release you choose.
+dependencies:
+  idf: ">=5.3"
+  espressif/esp_video: "*"        # V4L2 framework: CSI capture + H.264 M2M (/dev/video11)
+  espressif/esp_cam_sensor: "*"   # OV5647 MIPI-CSI sensor driver
+  espressif/esp_h264: "*"         # hardware H.264 codec backing the M2M device

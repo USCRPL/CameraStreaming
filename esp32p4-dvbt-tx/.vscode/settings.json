@@ -1,0 +1,17 @@
+{
+  "idf.currentSetup": "C:\\Users\\pauli\\esp\\v5.5.1\\esp-idf",
+  "idf.openOcdConfigs": [
+    "board/esp32p4-builtin.cfg"
+  ],
+  "idf.customExtraVars": {
+    "IDF_TARGET": "esp32p4"
+  },
+  "clangd.path": "C:\\Users\\pauli\\.espressif\\tools\\esp-clang\\esp-19.1.2_20250312\\esp-clang\\bin\\clangd.exe",
+  "clangd.arguments": [
+    "--background-index",
+    "--query-driver=**",
+    "--compile-commands-dir=c:\\Users\\pauli\\Documents\\ESP32P4-LIVEVIDEO\\files\\esp32p4-dvbt-tx\\build"
+  ],
+  "idf.flashType": "UART",
+  "idf.portWin": "COM8"
+}

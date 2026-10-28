@@ -1,0 +1,27 @@
+# Target
+CONFIG_IDF_TARGET="esp32p4"
+
+# PSRAM - capture/encoder/TS buffers live here on the P4 dev boards
+CONFIG_SPIRAM=y
+
+# USB Host (the IT9507 modulator hangs off the P4 as a USB device)
+CONFIG_USB_HOST_ENABLED=y
+
+# --- Camera / video pipeline (names can vary by esp_video version; if a
+#     symbol is rejected, set it from `idf.py menuconfig` instead) ----------
+# Select the OV5647 MIPI-CSI sensor and enable the H.264 M2M encoder device:
+#   Component config -> Espressif Camera Sensors  -> OV5647
+#   Component config -> Espressif Video           -> MIPI-CSI device, H.264 device
+CONFIG_CAMERA_OV5647=y
+
+# H.264 hardware encoder M2M device (/dev/video11). REQUIRED — without this the
+# node is never created and open() returns ENOENT. Verify the exact symbol name
+# for your esp_video version with `grep H264 sdkconfig` after menuconfig.
+CONFIG_ESP_VIDEO_ENABLE_HW_H264_VIDEO_DEVICE=y
+
+# --- CSI interrupt cache-safety (fix for "one frame then CSI stall") --------
+# The CSI frame-done ISR re-arms the next capture; with the IT9507 USB host
+# generating cache-disable windows, a non-cache-safe ISR fails to restart the
+# CSI and you get exactly one frame. This keeps that ISR serviceable with cache
+# disabled. (Renamed from CONFIG_CAM_CTLR_MIPI_CSI_ISR_IRAM_SAFE in IDF 5.5.)
+CONFIG_CAM_CTLR_MIPI_CSI_ISR_CACHE_SAFE=y

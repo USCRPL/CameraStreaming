@@ -1,0 +1,8 @@
+version: "0.1.0"
+description: "ESP32-P4 USB-host driver for the ITE IT9507 DVB-T modulator (UT-100C)."
+targets:
+  - esp32p4
+dependencies:
+  idf: ">=5.3"
+# esp_cam_sensor is only needed by the example app, not the driver itself:
+#   espressif/esp_cam_sensor: "^1.0.0"
